@@ -15,6 +15,7 @@
 		484EDECD1AABACA300A5B0D0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 484EDECC1AABACA300A5B0D0 /* Images.xcassets */; };
 		484EDED01AABACA300A5B0D0 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 484EDECE1AABACA300A5B0D0 /* LaunchScreen.xib */; };
 		484EDEDC1AABACA300A5B0D0 /* WorldGrubTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 484EDEDB1AABACA300A5B0D0 /* WorldGrubTests.m */; };
+		484EDEE71AABC60C00A5B0D0 /* BurgerContainerControllerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 484EDEE61AABC60C00A5B0D0 /* BurgerContainerControllerViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +43,8 @@
 		484EDED51AABACA300A5B0D0 /* WorldGrubTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WorldGrubTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		484EDEDA1AABACA300A5B0D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		484EDEDB1AABACA300A5B0D0 /* WorldGrubTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WorldGrubTests.m; sourceTree = "<group>"; };
+		484EDEE51AABC60C00A5B0D0 /* BurgerContainerControllerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BurgerContainerControllerViewController.h; path = Controllers/BurgerContainerControllerViewController.h; sourceTree = "<group>"; };
+		484EDEE61AABC60C00A5B0D0 /* BurgerContainerControllerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BurgerContainerControllerViewController.m; path = Controllers/BurgerContainerControllerViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +91,8 @@
 				484EDEC61AABACA200A5B0D0 /* ViewController.h */,
 				484EDEC71AABACA300A5B0D0 /* ViewController.m */,
 				484EDEC91AABACA300A5B0D0 /* Main.storyboard */,
+				484EDEE51AABC60C00A5B0D0 /* BurgerContainerControllerViewController.h */,
+				484EDEE61AABC60C00A5B0D0 /* BurgerContainerControllerViewController.m */,
 				484EDECC1AABACA300A5B0D0 /* Images.xcassets */,
 				484EDECE1AABACA300A5B0D0 /* LaunchScreen.xib */,
 				484EDEC31AABACA200A5B0D0 /* WorldGrub.xcdatamodeld */,
@@ -227,6 +232,7 @@
 				484EDEC51AABACA200A5B0D0 /* WorldGrub.xcdatamodeld in Sources */,
 				484EDEC81AABACA300A5B0D0 /* ViewController.m in Sources */,
 				484EDEBF1AABACA200A5B0D0 /* main.m in Sources */,
+				484EDEE71AABC60C00A5B0D0 /* BurgerContainerControllerViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -421,6 +427,7 @@
 				484EDEE11AABACA300A5B0D0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		484EDEE21AABACA300A5B0D0 /* Build configuration list for PBXNativeTarget "WorldGrubTests" */ = {
 			isa = XCConfigurationList;
@@ -429,6 +436,7 @@
 				484EDEE41AABACA300A5B0D0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
