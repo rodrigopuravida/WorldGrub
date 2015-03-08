@@ -1,5 +1,5 @@
 //
-//  BurgerContainerControllerViewController.h
+//  MainMenuTableViewController.h
 //  WorldGrub
 //
 //  Created by Rodrigo Carballo on 3/7/15.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface BurgerContainerControllerViewController : UIViewController
+@interface MainMenuTableViewController : UITableViewController
 
 @end
