@@ -72,7 +72,25 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="K1K-wj-KNE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1085" y="486"/>
+            <point key="canvasLocation" x="587" y="298"/>
+        </scene>
+        <!--Food Choices View Controller-->
+        <scene sceneID="Ekv-MV-e7K">
+            <objects>
+                <viewController id="daS-q4-L89" customClass="FoodChoicesViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="h8c-Ag-Q3O"/>
+                        <viewControllerLayoutGuide type="bottom" id="O3E-39-7di"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="yD0-fW-jc0">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7sC-qq-YR7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-118" y="981"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="s92-vx-jdN">
@@ -90,7 +108,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Iu6-26-y6K" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="335" y="479"/>
+            <point key="canvasLocation" x="-128" y="304"/>
         </scene>
     </scenes>
 </document>

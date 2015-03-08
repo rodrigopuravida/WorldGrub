@@ -1,5 +1,5 @@
 //
-//  MainMenuTableViewController.h
+//  FoodChoicesViewController.h
 //  WorldGrub
 //
 //  Created by Rodrigo Carballo on 3/7/15.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MainMenuTableViewController : UITableViewController
-
-@property (weak,nonatomic) id<MenuPressedDelegate> delegate;
+@interface FoodChoicesViewController : UIViewController
 
 @end
