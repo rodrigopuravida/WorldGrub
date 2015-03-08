@@ -23,9 +23,11 @@
 -(void)fetchRecipesWithSearchTerm:(NSString *)searchTerm completionHandler:(void (^)(NSArray *results, NSString *error))completionHandler {
     
     
-    NSString *urlString = @"https://api.stackexchange.com/2.2/";
-    urlString = [urlString stringByAppendingString:@"search?order=desc&sort=activity&site=stackoverflow&intitle="];
-    urlString = [urlString stringByAppendingString:searchTerm];
+    
+    
+    NSString *urlString = @"https://webknox-recipes.p.mashape.com/recipes/search?cuisine=italian&diet=vegetarian&excludeIngredients=coconut&intolerances=egg%2C+gluten&number=10&offset=0&query=burger&type=main+course";
+//    urlString = [urlString stringByAppendingString:@"search?order=desc&sort=activity&site=stackoverflow&intitle="];
+//    urlString = [urlString stringByAppendingString:searchTerm];
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
 //    NSString *token = [defaults objectForKey:@"token"];
 //    if (token) {

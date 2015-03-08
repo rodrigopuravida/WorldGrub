@@ -7,6 +7,7 @@
 //
 
 #import "FoodChoicesViewController.h"
+#import "WorldGrubService.h"
 
 @interface FoodChoicesViewController ()
 
@@ -35,6 +36,14 @@
     // Dispose of any resources that can be recreated.
 }
 - (IBAction)foodChoicesButtonPressed:(id)sender {
+    
+    [[WorldGrubService sharedService] fetchRecipesWithSearchTerm:@"" completionHandler:^(NSArray *results, NSString *error) {
+//        self.questions = results;
+//        if (error) {
+//            //show alert view
+//        }
+//        [self.tableView reloadData];
+    }];
     
 }
 
