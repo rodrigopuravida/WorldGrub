@@ -34,6 +34,8 @@
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
 #warning Potentially incomplete method implementation.
     // Return the number of sections.
+    
+    tableView.backgroundView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"pasta.jpg"]];
     return 1;
 }
 

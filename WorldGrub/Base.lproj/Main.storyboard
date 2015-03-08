@@ -13,6 +13,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="separatorColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <sections>
                             <tableViewSection id="y3C-xz-MiA">
                                 <cells>
@@ -28,7 +30,7 @@
                                                         <constraint firstAttribute="width" constant="183" id="dfA-gf-Qub"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -37,6 +39,7 @@
                                                 <constraint firstItem="6RB-Cu-uOl" firstAttribute="leading" secondItem="fs7-G5-rW4" secondAttribute="leadingMargin" constant="18" id="cMX-Rt-hBk"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <connections>
                                             <segue destination="daS-q4-L89" kind="show" id="gFE-O3-Pss"/>
                                         </connections>
@@ -53,7 +56,7 @@
                                                         <constraint firstAttribute="width" constant="120" id="R1f-0I-vRy"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -62,6 +65,7 @@
                                                 <constraint firstItem="HE6-RM-HVK" firstAttribute="top" secondItem="dGe-Vv-szd" secondAttribute="topMargin" id="Og7-cS-QmX"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
@@ -75,7 +79,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="K1K-wj-KNE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="268" y="901"/>
+            <point key="canvasLocation" x="257" y="445"/>
         </scene>
         <!--Food Choices View Controller-->
         <scene sceneID="Ekv-MV-e7K">
@@ -89,12 +93,23 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3tj-1p-3mh">
-                                <rect key="frame" x="-5" y="0.0" width="600" height="600"/>
-                                <color key="backgroundColor" red="0.16078431900000001" green="0.8980392814" blue="0.18431372939999999" alpha="1" colorSpace="deviceRGB"/>
-                            </containerView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xE1-V7-sPJ">
+                                <rect key="frame" x="223" y="272" width="177" height="30"/>
+                                <state key="normal" title="Food Choices">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
                         </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="xE1-V7-sPJ" secondAttribute="centerX" constant="-11.5" id="YVU-3z-KTC"/>
+                            <constraint firstAttribute="centerY" secondItem="xE1-V7-sPJ" secondAttribute="centerY" constant="13" id="eSZ-tR-JqG"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="yD0-fW-jc0" id="DzM-nJ-1fW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7sC-qq-YR7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
