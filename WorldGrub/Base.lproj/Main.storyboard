@@ -37,6 +37,9 @@
                                                 <constraint firstItem="6RB-Cu-uOl" firstAttribute="leading" secondItem="fs7-G5-rW4" secondAttribute="leadingMargin" constant="18" id="cMX-Rt-hBk"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="daS-q4-L89" kind="show" id="gFE-O3-Pss"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="61" id="bbk-Lh-6SC">
                                         <autoresizingMask key="autoresizingMask"/>
@@ -72,7 +75,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="K1K-wj-KNE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="587" y="298"/>
+            <point key="canvasLocation" x="268" y="901"/>
         </scene>
         <!--Food Choices View Controller-->
         <scene sceneID="Ekv-MV-e7K">
@@ -85,12 +88,17 @@
                     <view key="view" contentMode="scaleToFill" id="yD0-fW-jc0">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3tj-1p-3mh">
+                                <rect key="frame" x="-5" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" red="0.16078431900000001" green="0.8980392814" blue="0.18431372939999999" alpha="1" colorSpace="deviceRGB"/>
+                            </containerView>
+                        </subviews>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7sC-qq-YR7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-118" y="981"/>
+            <point key="canvasLocation" x="961" y="435"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="s92-vx-jdN">
@@ -108,7 +116,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Iu6-26-y6K" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-128" y="304"/>
+            <point key="canvasLocation" x="-455" y="412"/>
         </scene>
     </scenes>
 </document>

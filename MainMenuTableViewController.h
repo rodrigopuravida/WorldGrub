@@ -10,6 +10,5 @@
 
 @interface MainMenuTableViewController : UITableViewController
 
-@property (weak,nonatomic) id<MenuPressedDelegate> delegate;
 
 @end
