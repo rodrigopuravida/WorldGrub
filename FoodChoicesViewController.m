@@ -37,7 +37,7 @@
 }
 - (IBAction)foodChoicesButtonPressed:(id)sender {
     
-    [[WorldGrubService sharedService] fetchRecipesWithSearchTerm:@"" completionHandler:^(NSArray *results, NSString *error) {
+    [[WorldGrubService sharedService] fetchRecipesWithSearchTerm:@"" completionHandler:^(NSDictionary *results, NSString *error) {
 //        self.questions = results;
 //        if (error) {
 //            //show alert view
