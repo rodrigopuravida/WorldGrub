@@ -110,6 +110,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <color key="backgroundColor" red="0.97647064920000004" green="0.094117656349999995" blue="0.52549022440000004" alpha="1" colorSpace="deviceRGB"/>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="recipeTitle" destination="lB7-NN-CeR" id="HU4-TT-3bL"/>

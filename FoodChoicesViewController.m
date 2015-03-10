@@ -9,11 +9,13 @@
 #import "FoodChoicesViewController.h"
 #import "WorldGrubService.h"
 #import "Recipe.h"
+#import "RecipeListViewController.h"
 
 @interface FoodChoicesViewController ()
 
 @property (strong, nonatomic) IBOutlet UIView *tableView;
 @property (strong,nonatomic) NSArray *recipes;
+
 
 
 @end
@@ -41,11 +43,12 @@
 - (IBAction)foodChoicesButtonPressed:(id)sender {
     
     [[WorldGrubService sharedService] fetchRecipesWithSearchTerm:@"" completionHandler:^(NSArray *results, NSString *error) {
-        self.recipes = results;
-//        if (error) {
-//            //show alert view
-//        }
-//        [self.tableView reloadData];
+    self.recipes = results;
+        
+    RecipeListViewController *recipeList = [self.storyboard instantiateViewControllerWithIdentifier:@"RECIPELISTVC"];
+    [self.navigationController pushViewController:recipeList animated:YES];
+        
+
         //RECIPELISTVC
     }];
     
