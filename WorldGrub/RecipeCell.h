@@ -1,5 +1,5 @@
 //
-//  RecipetTableViewController.h
+//  RecipeCell.h
 //  WorldGrub
 //
 //  Created by Rodrigo Carballo on 3/9/15.
@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface RecipetTableViewController : UITableViewController
+@interface RecipeCell : UITableViewCell
+@property (weak, nonatomic) IBOutlet UILabel *recipeTitle;
 
 @end
