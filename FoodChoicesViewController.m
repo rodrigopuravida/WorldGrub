@@ -8,10 +8,13 @@
 
 #import "FoodChoicesViewController.h"
 #import "WorldGrubService.h"
+#import "Recipe.h"
 
 @interface FoodChoicesViewController ()
 
 @property (strong, nonatomic) IBOutlet UIView *tableView;
+@property (strong,nonatomic) NSArray *recipes;
+
 
 @end
 
@@ -38,7 +41,7 @@
 - (IBAction)foodChoicesButtonPressed:(id)sender {
     
     [[WorldGrubService sharedService] fetchRecipesWithSearchTerm:@"" completionHandler:^(NSArray *results, NSString *error) {
-//        self.questions = results;
+        self.recipes = results;
 //        if (error) {
 //            //show alert view
 //        }
