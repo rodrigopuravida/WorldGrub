@@ -8,6 +8,7 @@
 
 #import "RecipeListViewController.h"
 #import "RecipeCell.h"
+#import "Recipe.h"
 
 @interface RecipeListViewController () <UITableViewDataSource>
 
@@ -30,17 +31,16 @@
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 2;
+    NSLog(@"%lu", (unsigned long)self.recipeList.count);
+    return self.recipeList.count;
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     RecipeCell *cell = [tableView dequeueReusableCellWithIdentifier:@"RECIPE_CELL"
                                                          forIndexPath:indexPath];
-//    cell.avatarImageView.image = nil;
-//    Question *question = self.questions[indexPath.row];
-//    cell.titleTextView.text = question.title;
-    //lazy loading of image
-        return cell;
+    Recipe *recipe = self.recipeList[indexPath.row];
+    cell.recipeTitle.text = recipe.title;
+    return cell;
 }
 
 

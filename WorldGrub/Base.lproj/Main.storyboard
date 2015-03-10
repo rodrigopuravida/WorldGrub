@@ -112,7 +112,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="recipeTitle" destination="lB7-NN-CeR" id="HU4-TT-3bL"/>
+                                            <outlet property="recipeTitle" destination="lB7-NN-CeR" id="fUZ-Mm-pSA"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>

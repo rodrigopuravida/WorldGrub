@@ -45,11 +45,12 @@
     [[WorldGrubService sharedService] fetchRecipesWithSearchTerm:@"" completionHandler:^(NSArray *results, NSString *error) {
     self.recipes = results;
         
+        
     RecipeListViewController *recipeList = [self.storyboard instantiateViewControllerWithIdentifier:@"RECIPELISTVC"];
+    recipeList.recipeList = self.recipes;   
     [self.navigationController pushViewController:recipeList animated:YES];
         
 
-        //RECIPELISTVC
     }];
     
 }
