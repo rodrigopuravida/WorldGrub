@@ -12,7 +12,7 @@
 
 +(id)sharedService;
 
--(void)fetchRecipesWithSearchTerm:(NSString *)searchTerm completionHandler:(void (^)(NSDictionary *results, NSString *error))completionHandler;
+-(void)fetchRecipesWithSearchTerm:(NSString *)searchTerm completionHandler:(void (^)(NSArray *results, NSString *error))completionHandler;
 
 
 @end

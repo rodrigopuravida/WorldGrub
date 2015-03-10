@@ -7,6 +7,7 @@
 //
 
 #import "WorldGrubService.h"
+#import "Recipe.h"
 #import <UNIRest.h>
 
 
@@ -22,7 +23,7 @@
     return mySharedService;
 }
 
--(void)fetchRecipesWithSearchTerm:(NSString *)searchTerm completionHandler:(void (^)(NSDictionary *results, NSString *error))completionHandler {
+-(void)fetchRecipesWithSearchTerm:(NSString *)searchTerm completionHandler:(void (^)(NSArray *results, NSString *error))completionHandler {
     
     
     NSDictionary *headers = @{@"X-Mashape-Key": @"A7ggDVHuZBmshbIcUqquqFDuWxZup1tLMDnjsnx8QpPISvJnPZ", @"Accept": @"application/json"};
@@ -41,17 +42,17 @@
             
             switch (code) {
                 case 200 ... 299: {
-                    //                    NSLog(@"%ld",(long)statusCode);
-                    //                    NSArray *results = [Question questionsFromJSON:data];
-                    //
-                    //                    dispatch_async(dispatch_get_main_queue(), ^{
-                    //                        if (results) {
-                    //                            completionHandler(results,nil);
-                    //                        } else {
-                    //                            completionHandler(nil,@"Search could not be completed");
-                    //                        }
-                    //                    });
-                    //                    break;
+                NSLog(@"%ld",(long)code);
+                NSArray *results = [Recipe recipesFromJSON:rawBody];
+                    
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    if (results) {
+                        completionHandler(results,nil);
+                    } else {
+                    completionHandler(nil,@"Search could not be completed");
+                                            }
+                });
+                    break;
                 }
                 default:
                     NSLog(@"%ld",(long)code);
