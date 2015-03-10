@@ -97,20 +97,19 @@
                                 <rect key="frame" x="0.0" y="0.0" width="606" height="600"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="81" id="qBd-Cy-grO" customClass="RecipeCell">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="RECIPE_CELL" rowHeight="81" id="qBd-Cy-grO" customClass="RecipeCell">
                                         <rect key="frame" x="0.0" y="0.0" width="606" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="qBd-Cy-grO" id="J2h-R3-zB0">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lB7-NN-CeR">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Test" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lB7-NN-CeR">
                                                     <rect key="frame" x="22" y="14" width="156" height="52"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
-                                            <color key="backgroundColor" red="0.97647064920000004" green="0.094117656349999995" blue="0.52549022440000004" alpha="1" colorSpace="deviceRGB"/>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="recipeTitle" destination="lB7-NN-CeR" id="HU4-TT-3bL"/>
@@ -127,6 +126,9 @@
                             <constraint firstItem="Nec-9B-8nu" firstAttribute="bottom" secondItem="r9x-H6-ai3" secondAttribute="top" id="mPm-iV-tYC"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="Nec-9B-8nu" id="GuZ-Ak-fKl"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ghe-el-xTp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
