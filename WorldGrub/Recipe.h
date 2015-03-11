@@ -7,11 +7,15 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 @interface Recipe : NSObject
 
 +(NSArray *)recipesFromJSON:(NSData *)jsonData;
 
 @property (strong, nonatomic) NSString *title;
+@property (strong,nonatomic) NSString *userId;
+@property (strong, nonatomic) UIImage *recipeImage;
+
 
 @end
