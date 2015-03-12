@@ -178,11 +178,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wV6-W4-5QR">
-                                <rect key="frame" x="-24" y="86" width="600" height="162"/>
+                            <pickerView contentMode="center" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wV6-W4-5QR">
+                                <rect key="frame" x="100" y="133" width="386" height="162"/>
+                                <color key="backgroundColor" red="0.39215686274509803" green="0.87450980392156863" blue="0.90588235294117647" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="fC0-58-k7D"/>
+                                    <constraint firstAttribute="height" constant="80" id="isN-Tb-rWG"/>
+                                </constraints>
                             </pickerView>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xE1-V7-sPJ">
-                                <rect key="frame" x="218" y="471" width="177" height="30"/>
+                                <rect key="frame" x="212" y="514" width="177" height="30"/>
                                 <state key="normal" title="Food Choices">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -192,10 +197,12 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.16078431900000001" green="0.8980392814" blue="0.18431372939999999" alpha="1" colorSpace="deviceRGB"/>
+                        <color key="backgroundColor" red="0.39215686274509803" green="0.87450980392156863" blue="0.90588235294117647" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstAttribute="centerX" secondItem="xE1-V7-sPJ" secondAttribute="centerX" constant="-11.5" id="YVU-3z-KTC"/>
-                            <constraint firstAttribute="centerY" secondItem="xE1-V7-sPJ" secondAttribute="centerY" constant="13" id="eSZ-tR-JqG"/>
+                            <constraint firstItem="O3E-39-7di" firstAttribute="top" secondItem="xE1-V7-sPJ" secondAttribute="bottom" constant="10" id="ErC-eX-G9I"/>
+                            <constraint firstAttribute="centerX" secondItem="wV6-W4-5QR" secondAttribute="centerX" id="fgu-H1-sLE"/>
+                            <constraint firstItem="wV6-W4-5QR" firstAttribute="top" secondItem="h8c-Ag-Q3O" secondAttribute="bottom" constant="69" id="qtb-iu-dry"/>
+                            <constraint firstAttribute="centerX" secondItem="xE1-V7-sPJ" secondAttribute="centerX" id="rnB-rY-TYx"/>
                         </constraints>
                     </view>
                     <connections>
