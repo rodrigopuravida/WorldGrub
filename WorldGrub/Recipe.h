@@ -14,8 +14,10 @@
 +(NSArray *)recipesFromJSON:(NSData *)jsonData;
 
 @property (strong, nonatomic) NSString *title;
-@property (strong,nonatomic) NSString *userId;
+@property (strong,nonatomic) NSString *recipeId;
 @property (strong, nonatomic) UIImage *recipeImage;
+@property (strong, nonatomic) NSString *recipeURL;
+
 
 
 @end

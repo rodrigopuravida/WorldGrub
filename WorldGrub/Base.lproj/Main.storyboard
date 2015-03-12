@@ -103,8 +103,11 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="qBd-Cy-grO" id="J2h-R3-zB0">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tTg-nM-kPb">
+                                                    <rect key="frame" x="23" y="1" width="117" height="73"/>
+                                                </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Test" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lB7-NN-CeR">
-                                                    <rect key="frame" x="22" y="14" width="156" height="52"/>
+                                                    <rect key="frame" x="185" y="15" width="156" height="52"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
@@ -112,6 +115,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="recipeImage" destination="tTg-nM-kPb" id="1Pu-7O-U3D"/>
                                             <outlet property="recipeTitle" destination="lB7-NN-CeR" id="fUZ-Mm-pSA"/>
                                         </connections>
                                     </tableViewCell>
@@ -132,7 +136,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ghe-el-xTp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1084" y="-173"/>
+            <point key="canvasLocation" x="1118" y="-249"/>
         </scene>
         <!--Food Choices View Controller-->
         <scene sceneID="Ekv-MV-e7K">
@@ -188,31 +192,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Iu6-26-y6K" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-455" y="412"/>
-        </scene>
-        <!--Table View Controller-->
-        <scene sceneID="84g-f6-POs">
-            <objects>
-                <tableViewController id="ZNz-1z-wGy" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="P3j-ha-VBH">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="Cft-PF-s8I">
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Cft-PF-s8I" id="3ak-lm-csX">
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="ZNz-1z-wGy" id="uIs-b6-Tfb"/>
-                            <outlet property="delegate" destination="ZNz-1z-wGy" id="oc5-qm-PxS"/>
-                        </connections>
-                    </tableView>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="OS4-gi-GjU" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
         </scene>
     </scenes>
 </document>

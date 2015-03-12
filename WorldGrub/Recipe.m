@@ -25,9 +25,10 @@
     for (NSDictionary *item in items) {
         Recipe *recipe = [[Recipe alloc] init];
         recipe.title = item[@"title"];
-//        NSDictionary *userInfo = item[@"owner"];
-//        question.avatarURL = userInfo[@"profile_image"];
-//        question.userId = userInfo[@"user_id"];
+        recipe.recipeId = item[@"id"];
+        NSArray *recipeUrls = item[@"imageUrls"];
+        recipe.recipeURL = recipeUrls[0];
+
         
         [temp addObject:recipe];
     }

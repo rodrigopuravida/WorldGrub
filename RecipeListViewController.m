@@ -40,6 +40,7 @@
                                                          forIndexPath:indexPath];
     Recipe *recipe = self.recipeList[indexPath.row];
     cell.recipeTitle.text = recipe.title;
+    
     return cell;
 }
 
