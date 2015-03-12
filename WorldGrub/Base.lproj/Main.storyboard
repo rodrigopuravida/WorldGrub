@@ -199,6 +199,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="countryPickerView" destination="wV6-W4-5QR" id="YNG-nj-8BC"/>
                         <outlet property="tableView" destination="yD0-fW-jc0" id="DzM-nJ-1fW"/>
                     </connections>
                 </viewController>

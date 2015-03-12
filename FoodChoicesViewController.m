@@ -16,6 +16,7 @@
 @property (strong, nonatomic) IBOutlet UIView *tableView;
 @property (strong,nonatomic) NSArray *recipes;
 
+@property (weak, nonatomic) IBOutlet UIPickerView *countryPickerView;
 
 
 @end
@@ -47,7 +48,7 @@
         
         
     RecipeListViewController *recipeList = [self.storyboard instantiateViewControllerWithIdentifier:@"RECIPELISTVC"];
-    recipeList.recipeList = self.recipes;   
+    recipeList.recipeList = self.recipes;
     [self.navigationController pushViewController:recipeList animated:YES];
         
 
