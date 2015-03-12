@@ -9,6 +9,7 @@
 #import "RecipeListViewController.h"
 #import "RecipeCell.h"
 #import "Recipe.h"
+#import "WorldGrubService.h"
 
 @interface RecipeListViewController () <UITableViewDataSource>
 
@@ -40,6 +41,17 @@
                                                          forIndexPath:indexPath];
     Recipe *recipe = self.recipeList[indexPath.row];
     cell.recipeTitle.text = recipe.title;
+    
+    //lazy loading of image
+    if (!recipe.recipeImage) {
+        [[WorldGrubService sharedService] fetchUserImage:recipe.recipeURL completionHandler:^(UIImage *image) {
+            recipe.recipeImage = image;
+            cell.recipeImage.image = image;
+        }];
+    } else {
+        cell.recipeImage.image = recipe.recipeImage;
+    }
+
     
     return cell;
 }

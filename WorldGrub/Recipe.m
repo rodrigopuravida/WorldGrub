@@ -26,10 +26,12 @@
         Recipe *recipe = [[Recipe alloc] init];
         recipe.title = item[@"title"];
         recipe.recipeId = item[@"id"];
+        recipe.baseUri = [jsonDictionary objectForKey:@"baseUri"];
         NSArray *recipeUrls = item[@"imageUrls"];
-        recipe.recipeURL = recipeUrls[0];
+        //recipe.recipeURL = recipeUrls[0];
+        //concatenating both strings
+        recipe.recipeURL = [recipe.baseUri stringByAppendingString:recipeUrls[0]];
 
-        
         [temp addObject:recipe];
     }
     NSArray *final = [[NSArray alloc] initWithArray:temp];
