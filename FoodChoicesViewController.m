@@ -16,6 +16,10 @@
 @property (strong, nonatomic) IBOutlet UIView *tableView;
 @property (strong,nonatomic) NSArray *recipes;
 @property (strong,nonatomic) NSArray *countryArray;
+@property (strong, nonatomic) NSString *cuisine;
+@property (strong, nonatomic) NSString *foodQuery;
+@property (strong, nonatomic) NSString *queryPart1;
+
 
 @property (weak, nonatomic) IBOutlet UIPickerView *countryPickerView;
 
@@ -39,8 +43,11 @@
 //    self.view.backgroundColor = [UIColor colorWithPatternImage:image];
 
     //setting up values for UIPicker
-    self.countryArray = @[@"Row 1", @"Row 2", @"Row 3",];
+    self.countryArray = @[@"African", @"Chinese", @"Japanese", @"Korean", @"Vietnamese", @"Thai", @"Indian", @"British", @"Irish", @"French", @"Italian", @"Mexican", @"Spanish", @"Middle Eastern", @"Jewish", @"American", @"Cajun", @"Southern", @"Greek", @"German", @"Nordic", @"Eastern European", @"Caribbean", @"Latin American"];
  
+    //sample URL
+    //https://webknox-recipes.p.mashape.com/recipes/search?cuisine=italian&number=25&offset=0&query=pasta
+    
 }
 
 - (void)pickerView:(UIPickerView *)countryPickerView didSelectRow: (NSInteger)row inComponent:(NSInteger)component {
@@ -59,11 +66,10 @@
 
 // tell the picker the title for a given component
 - (NSString *)pickerView:(UIPickerView *)countryPickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component {
-    NSString *title;
     
-    title = self.countryArray[row];
+    self.cuisine = self.countryArray[row];
     
-    return title;
+    return self.cuisine;
 }
 
 // tell the picker the width of each row for a given component
@@ -79,6 +85,11 @@
 }
 
 - (IBAction)foodChoicesButtonPressed:(id)sender {
+    
+    self.queryPart1 = @"https://webknox-recipes.p.mashape.com/recipes/search?cuisine=";
+    NSString *quereyInConstruction1 = [self.queryPart1 stringByAppendingString:self.cuisine];
+    
+    NSString *finalQuery;
     
     [[WorldGrubService sharedService] fetchRecipesWithSearchTerm:@"" completionHandler:^(NSArray *results, NSString *error) {
     self.recipes = results;
