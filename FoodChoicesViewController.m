@@ -20,6 +20,7 @@
 @property (strong, nonatomic) NSString *foodQuery;
 @property (strong, nonatomic) NSString *queryPart1;
 
+@property (weak, nonatomic) IBOutlet UITextField *userInputQueryText;
 
 @property (weak, nonatomic) IBOutlet UIPickerView *countryPickerView;
 
@@ -46,13 +47,17 @@
     self.countryArray = @[@"African", @"Chinese", @"Japanese", @"Korean", @"Vietnamese", @"Thai", @"Indian", @"British", @"Irish", @"French", @"Italian", @"Mexican", @"Spanish", @"Middle Eastern", @"Jewish", @"American", @"Cajun", @"Southern", @"Greek", @"German", @"Nordic", @"Eastern European", @"Caribbean", @"Latin American"];
  
     //sample URL
-    //https://webknox-recipes.p.mashape.com/recipes/search?cuisine=italian&number=25&offset=0&query=pasta
+    //https://webknox-recipes.p.mashape.com/recipes/search?cuisine=italian&number=30&offset=0&query=pasta
     
 }
 
 - (void)pickerView:(UIPickerView *)countryPickerView didSelectRow: (NSInteger)row inComponent:(NSInteger)component {
     // Handle the selection
-}
+    //self.cuisine = self.countryArray[row];
+    NSString *toModifyCountryString = self.countryArray[row];
+    NSString *toLowerCaseString = [toModifyCountryString lowercaseString];
+    
+    self.cuisine = [toLowerCaseString stringByReplacingOccurrencesOfString:@"[ ]" withString:@"+" options: NSRegularExpressionSearch range:NSMakeRange(0, toLowerCaseString.length)];}
 
 // tell the picker how many rows are available for a given component
 - (NSInteger)pickerView:(UIPickerView *)countryPickerView numberOfRowsInComponent:(NSInteger)component {
@@ -67,8 +72,9 @@
 // tell the picker the title for a given component
 - (NSString *)pickerView:(UIPickerView *)countryPickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component {
     
+    //self.cuisine = self.countryArray[row];
     self.cuisine = self.countryArray[row];
-    
+
     return self.cuisine;
 }
 
@@ -86,12 +92,25 @@
 
 - (IBAction)foodChoicesButtonPressed:(id)sender {
     
+    NSLog(self.cuisine);
+ 
     self.queryPart1 = @"https://webknox-recipes.p.mashape.com/recipes/search?cuisine=";
-    NSString *quereyInConstruction1 = [self.queryPart1 stringByAppendingString:self.cuisine];
+    NSString *queryInConstruction1 = [self.queryPart1 stringByAppendingString:self.cuisine];
+    NSString *queryInConstruction2 = [queryInConstruction1 stringByAppendingString:@"&number=30&offset=0&query="];
     
-    NSString *finalQuery;
+    //now need to check for spaces in the query for food
     
-    [[WorldGrubService sharedService] fetchRecipesWithSearchTerm:@"" completionHandler:^(NSArray *results, NSString *error) {
+    NSString *testString = self.userInputQueryText.text;
+    NSString *trimmedString = [testString stringByTrimmingCharactersInSet:
+                               [NSCharacterSet whitespaceAndNewlineCharacterSet]];
+    
+    //need to replace white space with '+'
+    NSString *nonWhiteSpaceString = [trimmedString stringByReplacingOccurrencesOfString:@"[ ]" withString:@"+" options: NSRegularExpressionSearch range:NSMakeRange(0, trimmedString.length)];
+    
+    
+    NSString *finalQuery = [queryInConstruction2 stringByAppendingString:nonWhiteSpaceString];
+    
+    [[WorldGrubService sharedService] fetchRecipesWithSearchTerm:finalQuery completionHandler:^(NSArray *results, NSString *error) {
     self.recipes = results;
         
         

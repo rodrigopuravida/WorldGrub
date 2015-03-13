@@ -192,16 +192,6 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xE1-V7-sPJ">
-                                <rect key="frame" x="212" y="514" width="177" height="30"/>
-                                <state key="normal" title="Food Choices">
-                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="foodChoicesButtonPressed:" destination="daS-q4-L89" eventType="touchUpInside" id="uXk-wU-uZd"/>
-                                </connections>
-                            </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3Gw-pp-4x1">
                                 <rect key="frame" x="100" y="349" width="232" height="30"/>
                                 <constraints>
@@ -211,11 +201,20 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xE1-V7-sPJ">
+                                <rect key="frame" x="212" y="401" width="177" height="30"/>
+                                <state key="normal" title="Food Choices">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="foodChoicesButtonPressed:" destination="daS-q4-L89" eventType="touchUpInside" id="uXk-wU-uZd"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.39215686274509803" green="0.87450980392156863" blue="0.90588235294117647" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="3Gw-pp-4x1" firstAttribute="top" secondItem="WtF-lY-ib2" secondAttribute="bottom" constant="5" id="Bqs-LP-b25"/>
-                            <constraint firstItem="O3E-39-7di" firstAttribute="top" secondItem="xE1-V7-sPJ" secondAttribute="bottom" constant="10" id="ErC-eX-G9I"/>
                             <constraint firstAttribute="centerX" secondItem="wV6-W4-5QR" secondAttribute="centerX" id="Ucu-ru-2Kf"/>
                             <constraint firstItem="WtF-lY-ib2" firstAttribute="top" secondItem="wV6-W4-5QR" secondAttribute="bottom" constant="70" id="bX8-5z-dOi"/>
                             <constraint firstItem="WtF-lY-ib2" firstAttribute="leading" secondItem="yD0-fW-jc0" secondAttribute="leadingMargin" constant="84" id="eef-8P-ZDZ"/>
@@ -228,6 +227,7 @@
                     <connections>
                         <outlet property="countryPickerView" destination="wV6-W4-5QR" id="YNG-nj-8BC"/>
                         <outlet property="tableView" destination="yD0-fW-jc0" id="DzM-nJ-1fW"/>
+                        <outlet property="userInputQueryText" destination="3Gw-pp-4x1" id="CQJ-ZS-piw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7sC-qq-YR7" userLabel="First Responder" sceneMemberID="firstResponder"/>

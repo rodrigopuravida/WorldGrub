@@ -28,7 +28,8 @@
     
     NSDictionary *headers = @{@"X-Mashape-Key": @"A7ggDVHuZBmshbIcUqquqFDuWxZup1tLMDnjsnx8QpPISvJnPZ", @"Accept": @"application/json"};
     UNIUrlConnection *asyncConnection = [[UNIRest get:^(UNISimpleRequest *request) {
-        [request setUrl:@"https://webknox-recipes.p.mashape.com/recipes/search?cuisine=italian&number=25&offset=0&query=pasta"];
+        //[request setUrl:@"https://webknox-recipes.p.mashape.com/recipes/search?cuisine=italian&number=25&offset=0&query=pasta"];
+        [request setUrl:searchTerm];
         [request setHeaders:headers];
     }] asJsonAsync:^(UNIHTTPJsonResponse *response, NSError *error) {
         NSInteger code = response.code;
