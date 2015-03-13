@@ -145,7 +145,6 @@
                                         <connections>
                                             <outlet property="recipeImage" destination="tTg-nM-kPb" id="1Pu-7O-U3D"/>
                                             <outlet property="recipeTitle" destination="lB7-NN-CeR" id="fUZ-Mm-pSA"/>
-                                            <segue destination="g91-dv-tOG" kind="show" identifier="RECIPE_DETAIL_VC" id="UZJ-9L-hdc"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -183,7 +182,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Faf-Sy-4KW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1223" y="-286"/>
+            <point key="canvasLocation" x="1214" y="-291"/>
         </scene>
         <!--Food Choices View Controller-->
         <scene sceneID="Ekv-MV-e7K">

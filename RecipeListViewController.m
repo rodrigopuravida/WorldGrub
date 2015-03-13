@@ -45,9 +45,9 @@
                                                          forIndexPath:indexPath];
     self.recipe = self.recipeList[indexPath.row];
     cell.recipeTitle.text = self.recipe.title;
-    self.recipeId = self.recipe.recipeId;
-    NSLog(@"RecipeId");
-    NSLog(@"%@",self.recipeId);
+//    self.recipeId = self.recipe.recipeId;
+//    NSLog(@"RecipeId");
+//    NSLog(@"%@",self.recipeId);
     
     //lazy loading of image
     if (!self.recipe.recipeImage) {
@@ -62,18 +62,32 @@
     return cell;
 }
 
--(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    if ([segue.identifier isEqualToString:@"RECIPE_DETAIL_VC"]) {
-        RecipeDetailViewController *recipeDetailVC = (RecipeDetailViewController *)segue.destinationViewController;
-        //NSIndexPath *indexPath = self.tableView.indexPathsForSelectedRows.firstObject;
-        //recipeDetailVC.recipeDetailId = self.recipeList[indexPath.row];
-        recipeDetailVC.recipeDetailId = self.recipeId;
-        NSLog(@"SelectedID");
-        NSLog(@"%@",recipeDetailVC.recipeDetailId);
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    
+    RecipeDetailViewController *recipedetail = [self.storyboard instantiateViewControllerWithIdentifier:@"RECIPE_DETAIL_VC"];
+    self.recipe = self.recipeList[indexPath.row];
+    self.recipeId = self.recipe.recipeId;
+    NSLog(@"RecipeId");
+    NSLog(@"%@",self.recipeId);
+    [self.navigationController pushViewController:recipedetail animated:YES];
 
-        
-    }
+
+    
 }
+
+//-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+//    if ([segue.identifier isEqualToString:@"RECIPE_DETAIL_VC"]) {
+//        RecipeDetailViewController *recipeDetailVC = (RecipeDetailViewController *)segue.destinationViewController;
+//        //NSIndexPath *indexPath = self.tableView.indexPathsForSelectedRows.firstObject;
+//        //recipeDetailVC.recipeDetailId = self.recipeList[indexPath.row];
+//        recipeDetailVC.recipeDetailId = self.recipeId;
+//        NSLog(@"SelectedID");
+//        NSLog(@"%@",recipeDetailVC.recipeDetailId);
+//
+//        
+//    }
+//}
 
 
 /*
