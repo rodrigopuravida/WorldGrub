@@ -10,11 +10,13 @@
 #import "RecipeCell.h"
 #import "Recipe.h"
 #import "WorldGrubService.h"
+#import "RecipeDetailViewController.h"
 
 @interface RecipeListViewController () <UITableViewDataSource, UITableViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (weak, nonatomic) NSString *recipeId;
+@property (weak, nonatomic) Recipe *recipe;
 
 @end
 
@@ -41,22 +43,37 @@
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     RecipeCell *cell = [tableView dequeueReusableCellWithIdentifier:@"RECIPE_CELL"
                                                          forIndexPath:indexPath];
-    Recipe *recipe = self.recipeList[indexPath.row];
-    cell.recipeTitle.text = recipe.title;
+    self.recipe = self.recipeList[indexPath.row];
+    cell.recipeTitle.text = self.recipe.title;
+    self.recipeId = self.recipe.recipeId;
+    NSLog(@"RecipeId");
+    NSLog(@"%@",self.recipeId);
     
     //lazy loading of image
-    if (!recipe.recipeImage) {
-        [[WorldGrubService sharedService] fetchUserImage:recipe.recipeURL completionHandler:^(UIImage *image) {
-            recipe.recipeImage = image;
+    if (!self.recipe.recipeImage) {
+        [[WorldGrubService sharedService] fetchUserImage:self.recipe.recipeURL completionHandler:^(UIImage *image) {
+            self.recipe.recipeImage = image;
             cell.recipeImage.image = image;
         }];
     } else {
-        cell.recipeImage.image = recipe.recipeImage;
+        cell.recipeImage.image = self.recipe.recipeImage;
     }
 
     return cell;
 }
 
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:@"RECIPE_DETAIL_VC"]) {
+        RecipeDetailViewController *recipeDetailVC = (RecipeDetailViewController *)segue.destinationViewController;
+        //NSIndexPath *indexPath = self.tableView.indexPathsForSelectedRows.firstObject;
+        //recipeDetailVC.recipeDetailId = self.recipeList[indexPath.row];
+        recipeDetailVC.recipeDetailId = self.recipeId;
+        NSLog(@"SelectedID");
+        NSLog(@"%@",recipeDetailVC.recipeDetailId);
+
+        
+    }
+}
 
 
 /*
@@ -64,6 +81,9 @@
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+ 
+ //RECIPEDETAILVC
+ 
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
 }
