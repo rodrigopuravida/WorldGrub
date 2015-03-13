@@ -55,6 +55,7 @@
     // Handle the selection
     //self.cuisine = self.countryArray[row];
     NSString *toModifyCountryString = self.countryArray[row];
+    //setting to lower case
     NSString *toLowerCaseString = [toModifyCountryString lowercaseString];
     
     self.cuisine = [toLowerCaseString stringByReplacingOccurrencesOfString:@"[ ]" withString:@"+" options: NSRegularExpressionSearch range:NSMakeRange(0, toLowerCaseString.length)];}
