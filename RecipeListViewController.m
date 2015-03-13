@@ -11,9 +11,10 @@
 #import "Recipe.h"
 #import "WorldGrubService.h"
 
-@interface RecipeListViewController () <UITableViewDataSource>
+@interface RecipeListViewController () <UITableViewDataSource, UITableViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (weak, nonatomic) NSString *recipeId;
 
 @end
 
@@ -22,6 +23,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.tableView.dataSource = self;
+    self.tableView.delegate = self;
     
     // Do any additional setup after loading the view.
 }
@@ -52,9 +54,10 @@
         cell.recipeImage.image = recipe.recipeImage;
     }
 
-    
     return cell;
 }
+
+- (void)did
 
 
 /*

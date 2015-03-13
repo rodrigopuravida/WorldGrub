@@ -97,7 +97,7 @@
  
     self.queryPart1 = @"https://webknox-recipes.p.mashape.com/recipes/search?cuisine=";
     NSString *queryInConstruction1 = [self.queryPart1 stringByAppendingString:self.cuisine];
-    NSString *queryInConstruction2 = [queryInConstruction1 stringByAppendingString:@"&number=30&offset=0&query="];
+    NSString *queryInConstruction2 = [queryInConstruction1 stringByAppendingString:@"&number=100&offset=0&query="];
     
     //now need to check for spaces in the query for food
     

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4803803E1AB28B000029115D /* RecipeDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4803803D1AB28B000029115D /* RecipeDetailViewController.m */; };
 		482D14AA1AABEFDA00366342 /* FoodChoicesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 482D14A91AABEFDA00366342 /* FoodChoicesViewController.m */; };
 		482D14AF1AAC083400366342 /* pasta.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 482D14AE1AAC083400366342 /* pasta.jpg */; };
 		482D14B11AACED4F00366342 /* mexicanfood.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 482D14B01AACED4F00366342 /* mexicanfood.jpg */; };
@@ -39,6 +40,8 @@
 
 /* Begin PBXFileReference section */
 		08BB9862C44B5CC2D1B4FBC1 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		4803803C1AB28B000029115D /* RecipeDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecipeDetailViewController.h; sourceTree = "<group>"; };
+		4803803D1AB28B000029115D /* RecipeDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecipeDetailViewController.m; sourceTree = "<group>"; };
 		482D14A81AABEFDA00366342 /* FoodChoicesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FoodChoicesViewController.h; path = ../FoodChoicesViewController.h; sourceTree = "<group>"; };
 		482D14A91AABEFDA00366342 /* FoodChoicesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FoodChoicesViewController.m; path = ../FoodChoicesViewController.m; sourceTree = "<group>"; };
 		482D14AB1AABF16C00366342 /* MenuPressedDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuPressedDelegate.h; sourceTree = "<group>"; };
@@ -144,6 +147,8 @@
 				484EDEC71AABACA300A5B0D0 /* ViewController.m */,
 				482D14A81AABEFDA00366342 /* FoodChoicesViewController.h */,
 				482D14A91AABEFDA00366342 /* FoodChoicesViewController.m */,
+				4803803C1AB28B000029115D /* RecipeDetailViewController.h */,
+				4803803D1AB28B000029115D /* RecipeDetailViewController.m */,
 				48A608E31AAE992E00BCE34E /* RecipeCell.h */,
 				48A608E41AAE992E00BCE34E /* RecipeCell.m */,
 				48A608E61AAE9C1E00BCE34E /* RecipeListViewController.h */,
@@ -342,6 +347,7 @@
 				484EDEC81AABACA300A5B0D0 /* ViewController.m in Sources */,
 				48A608E81AAE9C2A00BCE34E /* RecipeListViewController.m in Sources */,
 				484EDEBF1AABACA200A5B0D0 /* main.m in Sources */,
+				4803803E1AB28B000029115D /* RecipeDetailViewController.m in Sources */,
 				484EDEEF1AABE56400A5B0D0 /* MainMenuTableViewController.m in Sources */,
 				482D14AA1AABEFDA00366342 /* FoodChoicesViewController.m in Sources */,
 			);
