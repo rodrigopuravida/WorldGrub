@@ -8,10 +8,15 @@
 
 #import "RecipeDetailViewController.h"
 #import "WorldGrubService.h"
+#import "SingleRecipe.h"
+
 
 @interface RecipeDetailViewController ()
 @property (weak, nonatomic) NSString *recipeUrl;
 @property (strong,nonatomic) NSArray *recipeUrls;
+@property (weak, nonatomic) IBOutlet UIWebView *recipeWebView;
+@property (weak, nonatomic) SingleRecipe *currentRecipe;
+@property (strong, nonatomic) IBOutlet UIView *view;
 
 @end
 
@@ -36,7 +41,20 @@
     
     [[WorldGrubService sharedService] fetchRecipeBasedOnId:finalQuery completionHandler:^(NSArray *results, NSString *error) {
         self.recipeUrls = results;
+        
+        self.currentRecipe = results[0];
+        
+        //self.recipeWebView.frame = self.view.frame;
+        [self.view addSubview:_recipeWebView];
+        
+        NSString *urlString = self.currentRecipe.recipeURL;
+        NSURL *url = [NSURL URLWithString:urlString];
+        NSURLRequest *urlRequest = [NSURLRequest requestWithURL:url];
+        [self.recipeWebView loadRequest:urlRequest];
      }];
+    
+
+    
 
 }
 
