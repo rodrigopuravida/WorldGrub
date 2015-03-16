@@ -48,7 +48,7 @@
 //    self.recipeId = self.recipe.recipeId;
 //    NSLog(@"RecipeId");
 //    NSLog(@"%@",self.recipeId);
-    
+    cell.recipeImage.image = nil;
     //lazy loading of image
     if (!self.recipe.recipeImage) {
         [[WorldGrubService sharedService] fetchUserImage:self.recipe.recipeURL completionHandler:^(UIImage *image) {
