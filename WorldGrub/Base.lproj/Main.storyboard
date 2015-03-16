@@ -178,21 +178,26 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ptg-NT-13M">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lwb-60-Ktg">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </webView>
+                            </imageView>
                         </subviews>
-                        <color key="backgroundColor" red="0.9215686917" green="0.98431378599999997" blue="0.2117647231" alpha="1" colorSpace="deviceRGB"/>
+                        <constraints>
+                            <constraint firstItem="lwb-60-Ktg" firstAttribute="top" secondItem="gSE-bk-7Gm" secondAttribute="topMargin" id="H9V-MR-CPP"/>
+                            <constraint firstItem="iRW-aT-kEl" firstAttribute="top" secondItem="lwb-60-Ktg" secondAttribute="bottom" id="cTr-8h-QvZ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="lwb-60-Ktg" secondAttribute="trailing" constant="-16" id="djH-9F-oh5"/>
+                            <constraint firstItem="lwb-60-Ktg" firstAttribute="leading" secondItem="gSE-bk-7Gm" secondAttribute="leadingMargin" constant="-16" id="phd-Py-qNl"/>
+                        </constraints>
                     </view>
                     <connections>
-                        <outlet property="recipeWebView" destination="ptg-NT-13M" id="qYw-7Z-Vbj"/>
+                        <outlet property="foodImage" destination="lwb-60-Ktg" id="kpr-iT-yDI"/>
+                        <outlet property="foodView" destination="lwb-60-Ktg" id="sXe-qo-0rP"/>
                         <outlet property="view" destination="gSE-bk-7Gm" id="bPf-ah-JCh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Faf-Sy-4KW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1214" y="-291"/>
+            <point key="canvasLocation" x="1243" y="-321"/>
         </scene>
         <!--Food Choices View Controller-->
         <scene sceneID="Ekv-MV-e7K">

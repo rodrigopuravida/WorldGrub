@@ -69,6 +69,7 @@
     self.recipe = self.recipeList[indexPath.row];
     self.recipeId = self.recipe.recipeId;
     recipedetail.recipeDetailId = self.recipe.recipeId;
+    recipedetail.foodImage = self.recipe.recipeImage;
     NSLog(@"RecipeId");
     NSLog(@"%@",self.recipeId);
     [self.navigationController pushViewController:recipedetail animated:YES];

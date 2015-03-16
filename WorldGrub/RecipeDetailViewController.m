@@ -17,6 +17,7 @@
 //@property (weak, nonatomic) IBOutlet UIWebView *recipeWebView;
 @property (weak, nonatomic) SingleRecipe *currentRecipe;
 @property (strong, nonatomic) IBOutlet UIView *view;
+@property (weak, nonatomic) IBOutlet UIImageView *foodView;
 
 @end
 
@@ -30,7 +31,7 @@
     NSLog(@"%@",self.recipeDetailId);
     
     NSString *stringRecipeId = [NSString stringWithFormat:@"%d", self.recipeDetailId.intValue];
-//
+//    
 //    //need to build this url - "https://webknox-recipes.p.mashape.com/recipes/156992/information"
 //    //156992 being the id for the recipe
 //    

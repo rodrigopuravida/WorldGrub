@@ -11,5 +11,6 @@
 @interface RecipeDetailViewController : UIViewController
 
 @property (weak, nonatomic) NSString *recipeDetailId;
+@property (strong, nonatomic) UIImage *foodImage;
 
 @end
