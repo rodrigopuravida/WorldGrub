@@ -12,6 +12,7 @@
 		482D14AA1AABEFDA00366342 /* FoodChoicesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 482D14A91AABEFDA00366342 /* FoodChoicesViewController.m */; };
 		482D14B51AACFDDC00366342 /* WorldGrubService.m in Sources */ = {isa = PBXBuildFile; fileRef = 482D14B41AACFDDC00366342 /* WorldGrubService.m */; };
 		4848740A1ADA206A0038001D /* pasta.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 484874091ADA206A0038001D /* pasta.jpg */; };
+		4848740C1ADA2BE90038001D /* pasta.png in Resources */ = {isa = PBXBuildFile; fileRef = 4848740B1ADA2BE90038001D /* pasta.png */; };
 		484EDEBF1AABACA200A5B0D0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 484EDEBE1AABACA200A5B0D0 /* main.m */; };
 		484EDEC21AABACA200A5B0D0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 484EDEC11AABACA200A5B0D0 /* AppDelegate.m */; };
 		484EDEC51AABACA200A5B0D0 /* WorldGrub.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 484EDEC31AABACA200A5B0D0 /* WorldGrub.xcdatamodeld */; };
@@ -50,6 +51,7 @@
 		482D14B31AACFDDC00366342 /* WorldGrubService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WorldGrubService.h; sourceTree = "<group>"; };
 		482D14B41AACFDDC00366342 /* WorldGrubService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WorldGrubService.m; sourceTree = "<group>"; };
 		484874091ADA206A0038001D /* pasta.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = pasta.jpg; path = WorldGrub/pasta.jpg; sourceTree = "<group>"; };
+		4848740B1ADA2BE90038001D /* pasta.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pasta.png; sourceTree = "<group>"; };
 		484EDEB91AABACA200A5B0D0 /* WorldGrub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WorldGrub.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		484EDEBD1AABACA200A5B0D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		484EDEBE1AABACA200A5B0D0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -143,6 +145,7 @@
 				484EDEED1AABE56400A5B0D0 /* MainMenuTableViewController.h */,
 				484EDEEE1AABE56400A5B0D0 /* MainMenuTableViewController.m */,
 				482D14AB1AABF16C00366342 /* MenuPressedDelegate.h */,
+				4848740B1ADA2BE90038001D /* pasta.png */,
 				484EDEC61AABACA200A5B0D0 /* ViewController.h */,
 				484EDEC71AABACA300A5B0D0 /* ViewController.m */,
 				482D14A81AABEFDA00366342 /* FoodChoicesViewController.h */,
@@ -290,6 +293,7 @@
 				484EDEE91AABCA9100A5B0D0 /* ToDo in Resources */,
 				484EDECD1AABACA300A5B0D0 /* Images.xcassets in Resources */,
 				4848740A1ADA206A0038001D /* pasta.jpg in Resources */,
+				4848740C1ADA2BE90038001D /* pasta.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -9,7 +9,7 @@
 #import "MainMenuTableViewController.h"
 
 @interface MainMenuTableViewController ()
-@property (strong, nonatomic) IBOutlet UITableView *tableView;
+
 
 @end
 
@@ -24,7 +24,7 @@
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
-    self.tableView.backgroundView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"pasta.jpg"]];
+    self.tableView.backgroundView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"pasta.png"]];
     
     
     
