@@ -11,7 +11,7 @@
 #import "Recipe.h"
 #import "RecipeListViewController.h"
 
-@interface FoodChoicesViewController () <UIPickerViewDataSource, UIPickerViewDelegate>
+@interface FoodChoicesViewController () <UIPickerViewDataSource, UIPickerViewDelegate, UISearchBarDelegate>
 
 @property (strong, nonatomic) IBOutlet UIView *tableView;
 @property (strong,nonatomic) NSArray *recipes;
@@ -23,6 +23,7 @@
 @property (weak, nonatomic) IBOutlet UITextField *userInputQueryText;
 
 @property (weak, nonatomic) IBOutlet UIPickerView *countryPickerView;
+@property (weak, nonatomic) IBOutlet UISearchBar *searchBar;
 
 
 @end
@@ -33,6 +34,7 @@
     [super viewDidLoad];
     self.countryPickerView.dataSource = self;
     self.countryPickerView.delegate = self;
+    self.searchBar.delegate = self;
     // Do any additional setup after loading the view.
     
     //TODO: Set up background for image
@@ -50,6 +52,42 @@
     //https://webknox-recipes.p.mashape.com/recipes/search?cuisine=italian&number=30&offset=0&query=pasta
     
 }
+
+-(void)searchBarSearchButtonClicked:(UISearchBar *)searchBar {
+    
+    NSLog(self.cuisine);
+    
+    self.queryPart1 = @"https://webknox-recipes.p.mashape.com/recipes/search?cuisine=";
+    NSString *queryInConstruction1 = [self.queryPart1 stringByAppendingString:self.cuisine];
+    NSString *queryInConstruction2 = [queryInConstruction1 stringByAppendingString:@"&number=100&offset=0&query="];
+    
+    //now need to check for spaces in the query for food
+    
+    NSString *testString = self.userInputQueryText.text;
+    NSString *trimmedString = [testString stringByTrimmingCharactersInSet:
+                               [NSCharacterSet whitespaceAndNewlineCharacterSet]];
+    
+    //need to replace white space with '+'
+    NSString *nonWhiteSpaceString = [trimmedString stringByReplacingOccurrencesOfString:@"[ ]" withString:@"+" options: NSRegularExpressionSearch range:NSMakeRange(0, trimmedString.length)];
+    
+    
+    NSString *finalQuery = [queryInConstruction2 stringByAppendingString:nonWhiteSpaceString];
+    
+    [[WorldGrubService sharedService] fetchRecipesWithSearchTerm:finalQuery completionHandler:^(NSArray *results, NSString *error) {
+        self.recipes = results;
+        
+        
+        RecipeListViewController *recipeList = [self.storyboard instantiateViewControllerWithIdentifier:@"RECIPELISTVC"];
+        recipeList.recipeList = self.recipes;
+        [self.navigationController pushViewController:recipeList animated:YES];
+        
+        
+    }];
+    
+
+    
+}
+
 
 - (void)pickerView:(UIPickerView *)countryPickerView didSelectRow: (NSInteger)row inComponent:(NSInteger)component {
     // Handle the selection
@@ -91,38 +129,7 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (IBAction)foodChoicesButtonPressed:(id)sender {
-    
-    NSLog(self.cuisine);
- 
-    self.queryPart1 = @"https://webknox-recipes.p.mashape.com/recipes/search?cuisine=";
-    NSString *queryInConstruction1 = [self.queryPart1 stringByAppendingString:self.cuisine];
-    NSString *queryInConstruction2 = [queryInConstruction1 stringByAppendingString:@"&number=100&offset=0&query="];
-    
-    //now need to check for spaces in the query for food
-    
-    NSString *testString = self.userInputQueryText.text;
-    NSString *trimmedString = [testString stringByTrimmingCharactersInSet:
-                               [NSCharacterSet whitespaceAndNewlineCharacterSet]];
-    
-    //need to replace white space with '+'
-    NSString *nonWhiteSpaceString = [trimmedString stringByReplacingOccurrencesOfString:@"[ ]" withString:@"+" options: NSRegularExpressionSearch range:NSMakeRange(0, trimmedString.length)];
-    
-    
-    NSString *finalQuery = [queryInConstruction2 stringByAppendingString:nonWhiteSpaceString];
-    
-    [[WorldGrubService sharedService] fetchRecipesWithSearchTerm:finalQuery completionHandler:^(NSArray *results, NSString *error) {
-    self.recipes = results;
-        
-        
-    RecipeListViewController *recipeList = [self.storyboard instantiateViewControllerWithIdentifier:@"RECIPELISTVC"];
-    recipeList.recipeList = self.recipes;
-    [self.navigationController pushViewController:recipeList animated:YES];
-        
 
-    }];
-    
-}
 
 /*
 #pragma mark - Navigation
