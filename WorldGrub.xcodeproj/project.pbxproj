@@ -10,9 +10,8 @@
 		4803803E1AB28B000029115D /* RecipeDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4803803D1AB28B000029115D /* RecipeDetailViewController.m */; };
 		480380411AB3C6410029115D /* SingleRecipe.m in Sources */ = {isa = PBXBuildFile; fileRef = 480380401AB3C6410029115D /* SingleRecipe.m */; };
 		482D14AA1AABEFDA00366342 /* FoodChoicesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 482D14A91AABEFDA00366342 /* FoodChoicesViewController.m */; };
-		482D14AF1AAC083400366342 /* pasta.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 482D14AE1AAC083400366342 /* pasta.jpg */; };
-		482D14B11AACED4F00366342 /* mexicanfood.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 482D14B01AACED4F00366342 /* mexicanfood.jpg */; };
 		482D14B51AACFDDC00366342 /* WorldGrubService.m in Sources */ = {isa = PBXBuildFile; fileRef = 482D14B41AACFDDC00366342 /* WorldGrubService.m */; };
+		4848740A1ADA206A0038001D /* pasta.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 484874091ADA206A0038001D /* pasta.jpg */; };
 		484EDEBF1AABACA200A5B0D0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 484EDEBE1AABACA200A5B0D0 /* main.m */; };
 		484EDEC21AABACA200A5B0D0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 484EDEC11AABACA200A5B0D0 /* AppDelegate.m */; };
 		484EDEC51AABACA200A5B0D0 /* WorldGrub.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 484EDEC31AABACA200A5B0D0 /* WorldGrub.xcdatamodeld */; };
@@ -48,10 +47,9 @@
 		482D14A81AABEFDA00366342 /* FoodChoicesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FoodChoicesViewController.h; path = ../FoodChoicesViewController.h; sourceTree = "<group>"; };
 		482D14A91AABEFDA00366342 /* FoodChoicesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FoodChoicesViewController.m; path = ../FoodChoicesViewController.m; sourceTree = "<group>"; };
 		482D14AB1AABF16C00366342 /* MenuPressedDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuPressedDelegate.h; sourceTree = "<group>"; };
-		482D14AE1AAC083400366342 /* pasta.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = pasta.jpg; path = ../../../Downloads/pasta.jpg; sourceTree = "<group>"; };
-		482D14B01AACED4F00366342 /* mexicanfood.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = mexicanfood.jpg; path = ../../../Downloads/mexicanfood.jpg; sourceTree = "<group>"; };
 		482D14B31AACFDDC00366342 /* WorldGrubService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WorldGrubService.h; sourceTree = "<group>"; };
 		482D14B41AACFDDC00366342 /* WorldGrubService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WorldGrubService.m; sourceTree = "<group>"; };
+		484874091ADA206A0038001D /* pasta.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = pasta.jpg; path = WorldGrub/pasta.jpg; sourceTree = "<group>"; };
 		484EDEB91AABACA200A5B0D0 /* WorldGrub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WorldGrub.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		484EDEBD1AABACA200A5B0D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		484EDEBE1AABACA200A5B0D0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -110,8 +108,7 @@
 		482D14B21AACF17600366342 /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				482D14B01AACED4F00366342 /* mexicanfood.jpg */,
-				482D14AE1AAC083400366342 /* pasta.jpg */,
+				484874091ADA206A0038001D /* pasta.jpg */,
 			);
 			name = Images;
 			sourceTree = "<group>";
@@ -288,12 +285,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				482D14AF1AAC083400366342 /* pasta.jpg in Resources */,
-				482D14B11AACED4F00366342 /* mexicanfood.jpg in Resources */,
 				484EDECB1AABACA300A5B0D0 /* Main.storyboard in Resources */,
 				484EDED01AABACA300A5B0D0 /* LaunchScreen.xib in Resources */,
 				484EDEE91AABCA9100A5B0D0 /* ToDo in Resources */,
 				484EDECD1AABACA300A5B0D0 /* Images.xcassets in Resources */,
+				4848740A1ADA206A0038001D /* pasta.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

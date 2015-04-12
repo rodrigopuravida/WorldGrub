@@ -9,6 +9,7 @@
 #import "MainMenuTableViewController.h"
 
 @interface MainMenuTableViewController ()
+@property (strong, nonatomic) IBOutlet UITableView *tableView;
 
 @end
 
@@ -22,6 +23,12 @@
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    
+    self.tableView.backgroundView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"pasta.jpg"]];
+    
+    
+    
+
 }
 
 - (void)didReceiveMemoryWarning {
@@ -35,14 +42,18 @@
 #warning Potentially incomplete method implementation.
     // Return the number of sections.
     
-    tableView.backgroundView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"pasta.jpg"]];
+    
+    
+    
+    
     return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 #warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return 2;
+    
+        return 2;
 }
 
 /*

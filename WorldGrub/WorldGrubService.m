@@ -88,7 +88,7 @@
             switch (code) {
                 case 200 ... 299: {
                     NSLog(@"%ld",(long)code);
-                    NSDictionary *results = [SingleRecipe recipeFromJSON:rawBody];
+                    NSArray *results = [SingleRecipe recipeFromJSON:rawBody];
                     
                     dispatch_async(dispatch_get_main_queue(), ^{
                         if (results) {

@@ -19,10 +19,8 @@
         return nil;
     }    
         NSMutableArray *temp = [[NSMutableArray alloc] init];
-
-    
         SingleRecipe *recipe = [[SingleRecipe alloc] init];
-        recipe.recipeURL = [jsonDictionary objectForKey:@"sourceUrl"];
+        recipe.recipeURL = [jsonDictionary objectForKey:@"imageUrls"];
 
         [temp addObject:recipe];
 
