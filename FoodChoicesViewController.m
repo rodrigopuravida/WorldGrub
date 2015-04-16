@@ -55,7 +55,7 @@
 
 -(void)searchBarSearchButtonClicked:(UISearchBar *)searchBar {
     
-    NSLog(self.cuisine);
+    //NSLog(self.cuisine);
     
     self.queryPart1 = @"https://webknox-recipes.p.mashape.com/recipes/search?cuisine=";
     NSString *queryInConstruction1 = [self.queryPart1 stringByAppendingString:self.cuisine];
@@ -63,7 +63,7 @@
     
     //now need to check for spaces in the query for food
     
-    NSString *testString = self.userInputQueryText.text;
+    NSString *testString = self.searchBar.text;
     NSString *trimmedString = [testString stringByTrimmingCharactersInSet:
                                [NSCharacterSet whitespaceAndNewlineCharacterSet]];
     
