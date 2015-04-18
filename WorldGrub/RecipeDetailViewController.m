@@ -14,10 +14,11 @@
 @interface RecipeDetailViewController ()
 @property (weak, nonatomic) NSString *recipeUrl;
 @property (strong,nonatomic) NSArray *recipeUrls;
-//@property (weak, nonatomic) IBOutlet UIWebView *recipeWebView;
-@property (weak, nonatomic) SingleRecipe *currentRecipe;
+//@property (weak, nonatomic) SingleRecipe *currentRecipe;
 @property (strong, nonatomic) IBOutlet UIView *view;
-@property (weak, nonatomic) IBOutlet UIImageView *foodView;
+@property (weak, nonatomic) IBOutlet UIImageView *recipeImage;
+
+
 
 @end
 
@@ -29,6 +30,11 @@
     
     NSLog(@"RecipeId at Detail Recipe Controller");
     NSLog(@"%@",self.recipeDetailId);
+    NSLog(@"%@",self.imageUrl);
+    
+    [NSURLConnection sendAsynchronousRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:self.imageUrl]] queue:[NSOperationQueue mainQueue] completionHandler:^(NSURLResponse *response, NSData *data, NSError *error) {
+        self.recipeImage.image = [UIImage imageWithData:data];
+    }];
     
     NSString *stringRecipeId = [NSString stringWithFormat:@"%d", self.recipeDetailId.intValue];
     
@@ -41,16 +47,19 @@
     NSString *finalQuery = [queryInConstruction1 stringByAppendingString:@"/information"];
     
     [[WorldGrubService sharedService] fetchRecipeBasedOnId:finalQuery completionHandler:^(NSArray *results, NSString *error) {
-        self.recipeUrls = results;
         
-        self.currentRecipe = results[0];
+        self.recipeDetails = results;
+        NSLog(@"Pause");
+        
+       
         
              }];
     
-
     
-
-}
+   
+    
+    
+ }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

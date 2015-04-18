@@ -181,26 +181,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lwb-60-Ktg">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="c5X-44-DYr">
+                                <rect key="frame" x="92" y="28" width="440" height="376"/>
                             </imageView>
                         </subviews>
-                        <constraints>
-                            <constraint firstItem="lwb-60-Ktg" firstAttribute="top" secondItem="gSE-bk-7Gm" secondAttribute="topMargin" id="H9V-MR-CPP"/>
-                            <constraint firstItem="iRW-aT-kEl" firstAttribute="top" secondItem="lwb-60-Ktg" secondAttribute="bottom" id="cTr-8h-QvZ"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="lwb-60-Ktg" secondAttribute="trailing" constant="-16" id="djH-9F-oh5"/>
-                            <constraint firstItem="lwb-60-Ktg" firstAttribute="leading" secondItem="gSE-bk-7Gm" secondAttribute="leadingMargin" constant="-16" id="phd-Py-qNl"/>
-                        </constraints>
                     </view>
                     <connections>
-                        <outlet property="foodImage" destination="lwb-60-Ktg" id="kpr-iT-yDI"/>
-                        <outlet property="foodView" destination="lwb-60-Ktg" id="sXe-qo-0rP"/>
+                        <outlet property="recipeImage" destination="c5X-44-DYr" id="uTt-56-xIB"/>
                         <outlet property="view" destination="gSE-bk-7Gm" id="bPf-ah-JCh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Faf-Sy-4KW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="311" y="-593"/>
+            <point key="canvasLocation" x="291" y="-588"/>
         </scene>
         <!--Food Choices View Controller-->
         <scene sceneID="Ekv-MV-e7K">

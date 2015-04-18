@@ -77,8 +77,6 @@
         [request setHeaders:headers];
     }] asJsonAsync:^(UNIHTTPJsonResponse *response, NSError *error) {
         NSInteger code = response.code;
-        NSDictionary *responseHeaders = response.headers;
-        UNIJsonNode *body = response.body;
         NSData *rawBody = response.rawBody;
         
         if (error) {
