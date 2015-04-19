@@ -181,10 +181,45 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="c5X-44-DYr">
-                                <rect key="frame" x="92" y="28" width="440" height="376"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="c5X-44-DYr">
+                                <rect key="frame" x="24" y="28" width="552" height="564"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="376" id="4NQ-I6-VMq"/>
+                                    <constraint firstAttribute="width" constant="440" id="wnf-9x-0aN"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="4NQ-I6-VMq"/>
+                                        <exclude reference="wnf-9x-0aN"/>
+                                    </mask>
+                                </variation>
                             </imageView>
                         </subviews>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="c5X-44-DYr" secondAttribute="centerX" id="8ke-kn-Sqi"/>
+                            <constraint firstItem="iRW-aT-kEl" firstAttribute="top" secondItem="c5X-44-DYr" secondAttribute="bottom" constant="8" id="JXS-DB-r72"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="c5X-44-DYr" secondAttribute="trailing" constant="52" id="MjB-ax-Cvt"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="c5X-44-DYr" secondAttribute="trailing" constant="52" id="RYK-hn-MxK"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="c5X-44-DYr" secondAttribute="trailing" constant="8" id="ZH0-FD-e70"/>
+                            <constraint firstItem="iRW-aT-kEl" firstAttribute="top" secondItem="c5X-44-DYr" secondAttribute="bottom" constant="196" id="d61-q7-GIN"/>
+                            <constraint firstItem="c5X-44-DYr" firstAttribute="top" secondItem="Pw9-ak-eRU" secondAttribute="bottom" constant="8" id="eJq-lI-sLS"/>
+                            <constraint firstItem="c5X-44-DYr" firstAttribute="top" secondItem="Pw9-ak-eRU" secondAttribute="bottom" constant="8" symbolic="YES" id="i46-Mj-VJb"/>
+                            <constraint firstItem="c5X-44-DYr" firstAttribute="top" secondItem="Pw9-ak-eRU" secondAttribute="bottom" constant="8" id="iSV-Zc-NSA"/>
+                            <constraint firstItem="c5X-44-DYr" firstAttribute="leading" secondItem="gSE-bk-7Gm" secondAttribute="leadingMargin" constant="8" id="sFe-Kd-n59"/>
+                            <constraint firstAttribute="centerY" secondItem="c5X-44-DYr" secondAttribute="centerY" id="w7H-GI-1rO"/>
+                            <constraint firstItem="c5X-44-DYr" firstAttribute="leading" secondItem="gSE-bk-7Gm" secondAttribute="leadingMargin" constant="76" id="wrq-i8-BoM"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="8ke-kn-Sqi"/>
+                                <exclude reference="MjB-ax-Cvt"/>
+                                <exclude reference="RYK-hn-MxK"/>
+                                <exclude reference="eJq-lI-sLS"/>
+                                <exclude reference="w7H-GI-1rO"/>
+                                <exclude reference="wrq-i8-BoM"/>
+                                <exclude reference="d61-q7-GIN"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
                         <outlet property="recipeImage" destination="c5X-44-DYr" id="uTt-56-xIB"/>
