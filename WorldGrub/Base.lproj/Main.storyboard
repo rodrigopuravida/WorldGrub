@@ -182,7 +182,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="c5X-44-DYr">
-                                <rect key="frame" x="24" y="28" width="552" height="564"/>
+                                <rect key="frame" x="24" y="28" width="552" height="515"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="376" id="4NQ-I6-VMq"/>
                                     <constraint firstAttribute="width" constant="440" id="wnf-9x-0aN"/>
@@ -194,10 +194,19 @@
                                     </mask>
                                 </variation>
                             </imageView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="IDY-QX-axD">
+                                <rect key="frame" x="24" y="557" width="552" height="29"/>
+                                <segments>
+                                    <segment title="Ingredients"/>
+                                    <segment title="Directions"/>
+                                </segments>
+                            </segmentedControl>
                         </subviews>
                         <constraints>
                             <constraint firstAttribute="centerX" secondItem="c5X-44-DYr" secondAttribute="centerX" id="8ke-kn-Sqi"/>
-                            <constraint firstItem="iRW-aT-kEl" firstAttribute="top" secondItem="c5X-44-DYr" secondAttribute="bottom" constant="8" id="JXS-DB-r72"/>
+                            <constraint firstItem="IDY-QX-axD" firstAttribute="trailing" secondItem="c5X-44-DYr" secondAttribute="trailing" id="I1P-cQ-rWF"/>
+                            <constraint firstItem="iRW-aT-kEl" firstAttribute="top" secondItem="c5X-44-DYr" secondAttribute="bottom" constant="57" id="JXS-DB-r72"/>
+                            <constraint firstItem="IDY-QX-axD" firstAttribute="leading" secondItem="c5X-44-DYr" secondAttribute="leading" id="LsN-r2-8Ob"/>
                             <constraint firstAttribute="trailingMargin" secondItem="c5X-44-DYr" secondAttribute="trailing" constant="52" id="MjB-ax-Cvt"/>
                             <constraint firstAttribute="trailingMargin" secondItem="c5X-44-DYr" secondAttribute="trailing" constant="52" id="RYK-hn-MxK"/>
                             <constraint firstAttribute="trailingMargin" secondItem="c5X-44-DYr" secondAttribute="trailing" constant="8" id="ZH0-FD-e70"/>
@@ -205,6 +214,7 @@
                             <constraint firstItem="c5X-44-DYr" firstAttribute="top" secondItem="Pw9-ak-eRU" secondAttribute="bottom" constant="8" id="eJq-lI-sLS"/>
                             <constraint firstItem="c5X-44-DYr" firstAttribute="top" secondItem="Pw9-ak-eRU" secondAttribute="bottom" constant="8" symbolic="YES" id="i46-Mj-VJb"/>
                             <constraint firstItem="c5X-44-DYr" firstAttribute="top" secondItem="Pw9-ak-eRU" secondAttribute="bottom" constant="8" id="iSV-Zc-NSA"/>
+                            <constraint firstItem="IDY-QX-axD" firstAttribute="top" secondItem="c5X-44-DYr" secondAttribute="bottom" constant="14" id="kce-8Z-JfV"/>
                             <constraint firstItem="c5X-44-DYr" firstAttribute="leading" secondItem="gSE-bk-7Gm" secondAttribute="leadingMargin" constant="8" id="sFe-Kd-n59"/>
                             <constraint firstAttribute="centerY" secondItem="c5X-44-DYr" secondAttribute="centerY" id="w7H-GI-1rO"/>
                             <constraint firstItem="c5X-44-DYr" firstAttribute="leading" secondItem="gSE-bk-7Gm" secondAttribute="leadingMargin" constant="76" id="wrq-i8-BoM"/>
@@ -246,12 +256,14 @@
                                 <rect key="frame" x="0.0" y="64" width="600" height="44"/>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
-                            <pickerView contentMode="center" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wV6-W4-5QR">
-                                <rect key="frame" x="107" y="263" width="386" height="162"/>
+                            <pickerView contentMode="center" translatesAutoresizingMaskIntoConstraints="NO" id="wV6-W4-5QR">
+                                <rect key="frame" x="107" y="151" width="386" height="162"/>
                                 <color key="backgroundColor" red="0.39215686274509803" green="0.87450980392156863" blue="0.90588235294117647" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="386" id="6rj-Zo-iae"/>
+                                    <constraint firstAttribute="height" constant="162" id="ikF-sp-q6b"/>
                                     <constraint firstAttribute="height" constant="80" id="isN-Tb-rWG"/>
-                                    <constraint firstAttribute="width" constant="500" id="nQn-8r-9QE"/>
+                                    <constraint firstAttribute="width" constant="386" id="nQn-8r-9QE"/>
                                 </constraints>
                                 <variation key="default">
                                     <mask key="constraints">
@@ -264,7 +276,8 @@
                         <constraints>
                             <constraint firstItem="aYQ-zI-qrf" firstAttribute="leading" secondItem="yD0-fW-jc0" secondAttribute="leadingMargin" constant="-16" id="4kB-1u-jFn"/>
                             <constraint firstItem="aYQ-zI-qrf" firstAttribute="top" secondItem="h8c-Ag-Q3O" secondAttribute="bottom" id="7mO-DV-vow"/>
-                            <constraint firstItem="O3E-39-7di" firstAttribute="top" secondItem="wV6-W4-5QR" secondAttribute="bottom" constant="175" id="JCj-Ns-RU0"/>
+                            <constraint firstItem="O3E-39-7di" firstAttribute="top" secondItem="wV6-W4-5QR" secondAttribute="bottom" constant="287" id="JCj-Ns-RU0"/>
+                            <constraint firstItem="wV6-W4-5QR" firstAttribute="top" secondItem="aYQ-zI-qrf" secondAttribute="bottom" constant="43" id="OzZ-ZM-0BX"/>
                             <constraint firstAttribute="centerX" secondItem="wV6-W4-5QR" secondAttribute="centerX" id="Ucu-ru-2Kf"/>
                             <constraint firstAttribute="centerY" secondItem="wV6-W4-5QR" secondAttribute="centerY" id="aDF-OA-ffO"/>
                             <constraint firstAttribute="centerX" secondItem="wV6-W4-5QR" secondAttribute="centerX" id="fgu-H1-sLE"/>
