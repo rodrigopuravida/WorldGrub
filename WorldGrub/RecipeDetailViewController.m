@@ -18,6 +18,11 @@
 @property (strong, nonatomic) IBOutlet UIView *view;
 @property (weak, nonatomic) IBOutlet UIImageView *recipeImage;
 
+@property (weak, nonatomic) IBOutlet UISegmentedControl *segmentedControl;
+
+
+- (IBAction)segmentedControlAction:(id)sender;
+
 
 
 @end
@@ -78,4 +83,6 @@
 }
 */
 
+- (IBAction)segmentedControlAction:(id)sender {
+}
 @end
