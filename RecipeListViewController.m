@@ -54,10 +54,12 @@
         [[WorldGrubService sharedService] fetchUserImage:self.recipe.recipeURL completionHandler:^(UIImage *image) {
             self.recipe.recipeImage = image;
             cell.recipeImage.image = image;
+            self.imageToPass = image;
         }];
     } else {
         cell.recipeImage.image = self.recipe.recipeImage;
     }
+    
 
     return cell;
 }
@@ -70,6 +72,7 @@
     self.recipeId = self.recipe.recipeId;
     recipedetail.recipeDetailId = self.recipe.recipeId;
     recipedetail.imageUrl = self.recipe.recipeURL;
+    recipedetail.foodImage = self.recipe.recipeImage;
 
     
     NSLog(@"RecipeId");

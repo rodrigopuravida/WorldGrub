@@ -11,5 +11,6 @@
 @interface RecipeListViewController : UIViewController
 
 @property (strong,nonatomic) NSArray *recipeList;
+@property (strong,nonatomic) UIImage *imageToPass;
 
 @end
