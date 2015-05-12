@@ -24,7 +24,7 @@
         recipe.foodImage = [jsonDictionary objectForKey:@"image"];
         recipe.recipeId= [jsonDictionary objectForKey:@"id"];
         recipe.recipeTitle = [jsonDictionary objectForKey:@"title"];
-        recipe.extendedIngredients = [jsonDictionary objectForKey:@"extendedIngredientes"];
+        recipe.extendedIngredients = [jsonDictionary objectForKey:@"extendedIngredients"];
     
     
     
