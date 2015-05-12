@@ -16,6 +16,7 @@
 @property (strong, nonatomic) NSString *title;
 @property (strong,nonatomic) NSString *recipeId;
 @property (strong, nonatomic) UIImage *recipeImage;
+@property (strong, nonatomic) UIImage *recipeListImage;
 @property (strong, nonatomic) NSString *recipeURL;
 @property (strong, nonatomic) NSString *baseUri;
 

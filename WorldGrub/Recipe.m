@@ -26,6 +26,7 @@
         Recipe *recipe = [[Recipe alloc] init];
         recipe.title = item[@"title"];
         recipe.recipeId = item[@"id"];
+        recipe.recipeListImage = item[@"image"];
         recipe.baseUri = [jsonDictionary objectForKey:@"baseUri"];
         NSArray *recipeUrls = item[@"imageUrls"];
         //recipe.recipeURL = recipeUrls[0];

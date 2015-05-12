@@ -16,6 +16,7 @@
 @property (strong, nonatomic) NSString *foodImage;
 @property (strong, nonatomic) NSString *recipeId;
 @property (strong, nonatomic) NSString *recipeTitle;
+@property (strong, nonatomic) NSMutableArray *extendedIngredients;
 
 
 

@@ -20,14 +20,24 @@
 
 @property (weak, nonatomic) IBOutlet UISegmentedControl *segmentedControl;
 
-
-- (IBAction)segmentedControlAction:(id)sender;
-
-
-
 @end
 
 @implementation RecipeDetailViewController
+
+- (IBAction)segmentedControlAction:(id)sender
+{
+    if(self.segmentedControl.selectedSegmentIndex == 0)
+    {
+        self.view.backgroundColor = [UIColor redColor];
+    }
+    else
+        if(self.segmentedControl.selectedSegmentIndex == 1)
+        {
+            self.view.backgroundColor = [UIColor greenColor];
+            
+        }
+}
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -40,8 +50,6 @@
     [NSURLConnection sendAsynchronousRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:self.imageUrl]] queue:[NSOperationQueue mainQueue] completionHandler:^(NSURLResponse *response, NSData *data, NSError *error) {
         self.recipeImage.image = [UIImage imageWithData:data];
     }];
-    
-    
     
     NSString *stringRecipeId = [NSString stringWithFormat:@"%d", self.recipeDetailId.intValue];
     
@@ -58,13 +66,7 @@
         self.recipeDetails = results;
         NSLog(@"Pause");
         
-       
-        
-             }];
-    
-    
-   
-    
+              }];
     
  }
 
@@ -83,6 +85,5 @@
 }
 */
 
-- (IBAction)segmentedControlAction:(id)sender {
-}
+
 @end
