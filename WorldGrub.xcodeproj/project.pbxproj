@@ -26,6 +26,7 @@
 		48A608DF1AAE852A00BCE34E /* Recipe.m in Sources */ = {isa = PBXBuildFile; fileRef = 48A608DE1AAE852A00BCE34E /* Recipe.m */; };
 		48A608E51AAE992E00BCE34E /* RecipeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 48A608E41AAE992E00BCE34E /* RecipeCell.m */; };
 		48A608E81AAE9C2A00BCE34E /* RecipeListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 48A608E71AAE9C2A00BCE34E /* RecipeListViewController.m */; };
+		48E5E8E01B03F96100723575 /* Ingredients.m in Sources */ = {isa = PBXBuildFile; fileRef = 48E5E8DF1B03F96100723575 /* Ingredients.m */; };
 		CF408580CC4C8A007D5FF0CB /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 72616C04814D6DD024BEA096 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -75,6 +76,8 @@
 		48A608E41AAE992E00BCE34E /* RecipeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecipeCell.m; sourceTree = "<group>"; };
 		48A608E61AAE9C1E00BCE34E /* RecipeListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = RecipeListViewController.h; path = ../RecipeListViewController.h; sourceTree = "<group>"; };
 		48A608E71AAE9C2A00BCE34E /* RecipeListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RecipeListViewController.m; path = ../RecipeListViewController.m; sourceTree = "<group>"; };
+		48E5E8DE1B03F96100723575 /* Ingredients.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ingredients.h; sourceTree = "<group>"; };
+		48E5E8DF1B03F96100723575 /* Ingredients.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Ingredients.m; sourceTree = "<group>"; };
 		72616C04814D6DD024BEA096 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACFEC818F3C3E4CCDA41E163 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -154,6 +157,8 @@
 				4803803D1AB28B000029115D /* RecipeDetailViewController.m */,
 				4803803F1AB3C6410029115D /* SingleRecipe.h */,
 				480380401AB3C6410029115D /* SingleRecipe.m */,
+				48E5E8DE1B03F96100723575 /* Ingredients.h */,
+				48E5E8DF1B03F96100723575 /* Ingredients.m */,
 				48A608E31AAE992E00BCE34E /* RecipeCell.h */,
 				48A608E41AAE992E00BCE34E /* RecipeCell.m */,
 				48A608E61AAE9C1E00BCE34E /* RecipeListViewController.h */,
@@ -350,6 +355,7 @@
 				480380411AB3C6410029115D /* SingleRecipe.m in Sources */,
 				484EDEC51AABACA200A5B0D0 /* WorldGrub.xcdatamodeld in Sources */,
 				48A608DF1AAE852A00BCE34E /* Recipe.m in Sources */,
+				48E5E8E01B03F96100723575 /* Ingredients.m in Sources */,
 				484EDEC81AABACA300A5B0D0 /* ViewController.m in Sources */,
 				48A608E81AAE9C2A00BCE34E /* RecipeListViewController.m in Sources */,
 				484EDEBF1AABACA200A5B0D0 /* main.m in Sources */,
