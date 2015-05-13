@@ -29,7 +29,8 @@
     if(self.segmentedControl.selectedSegmentIndex == 0)
     {
         self.view.backgroundColor = [UIColor redColor];
-    }
+        
+            }
     else
         if(self.segmentedControl.selectedSegmentIndex == 1)
         {
@@ -64,6 +65,9 @@
     [[WorldGrubService sharedService] fetchRecipeBasedOnId:finalQuery completionHandler:^(NSArray *results, NSString *error) {
         
         self.recipeDetails = results;
+        //self.recipeIngredients = self.recipeDetails[4];
+        NSLog(@"RecipeDetails segment cntrol has been clicked");
+        
         NSLog(@"Pause");
         
               }];
