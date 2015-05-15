@@ -14,7 +14,7 @@
 @interface RecipeDetailViewController ()
 @property (weak, nonatomic) NSString *recipeUrl;
 @property (strong,nonatomic) NSArray *recipeUrls;
-//@property (weak, nonatomic) SingleRecipe *currentRecipe;
+@property (weak, nonatomic) SingleRecipe *currentRecipe;
 @property (strong, nonatomic) IBOutlet UIView *view;
 @property (weak, nonatomic) IBOutlet UIImageView *recipeImage;
 
@@ -65,7 +65,18 @@
     [[WorldGrubService sharedService] fetchRecipeBasedOnId:finalQuery completionHandler:^(NSArray *results, NSString *error) {
         
         self.recipeDetails = results;
-        //self.recipeIngredients = self.recipeDetails[4];
+        
+        for (NSDictionary *item in self.recipeDetails) {
+            NSMutableArray *temp = [[NSMutableArray alloc] init];
+            self.currentRecipe.extendedIngredients = item[@"extendedIngredients"];
+            
+        }
+        
+        
+        
+                
+        
+        
         NSLog(@"RecipeDetails segment cntrol has been clicked");
         
         NSLog(@"Pause");
