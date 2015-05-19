@@ -29,12 +29,14 @@
     if(self.segmentedControl.selectedSegmentIndex == 0)
     {
         self.view.backgroundColor = [UIColor redColor];
+        NSLog(@"I am on segment Ingredients");
         
             }
     else
         if(self.segmentedControl.selectedSegmentIndex == 1)
         {
             self.view.backgroundColor = [UIColor greenColor];
+            NSLog(@"I am on segment Directions");
             
         }
 }
@@ -43,6 +45,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.segmentedControl.selected = NO;
+    
     
     NSLog(@"RecipeId at Detail Recipe Controller");
     NSLog(@"%@",self.recipeDetailId);
@@ -66,18 +70,12 @@
         
         self.recipeDetails = results;
         
-        for (NSDictionary *item in self.recipeDetails) {
-            NSMutableArray *temp = [[NSMutableArray alloc] init];
-            self.currentRecipe.extendedIngredients = item[@"extendedIngredients"];
-            
-        }
+//        for (NSDictionary *item in self.recipeDetails) {
+//            NSMutableArray *temp = [[NSMutableArray alloc] init];
+//            self.currentRecipe.extendedIngredients = item[@"extendedIngredients"];
+//            
+//        }
         
-        
-        
-                
-        
-        
-        NSLog(@"RecipeDetails segment cntrol has been clicked");
         
         NSLog(@"Pause");
         
