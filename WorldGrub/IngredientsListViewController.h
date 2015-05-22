@@ -11,5 +11,6 @@
 
 
 @interface IngredientsListViewController : UIViewController
+@property (weak, nonatomic) NSString *recipeDetailId;
 
 @end

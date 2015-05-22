@@ -9,6 +9,7 @@
 #import "RecipeDetailViewController.h"
 #import "WorldGrubService.h"
 #import "SingleRecipe.h"
+#import "IngredientsListViewController.h"
 
 
 @interface RecipeDetailViewController ()
@@ -29,6 +30,9 @@
     if(self.segmentedControl.selectedSegmentIndex == 0)
     {
         self.view.backgroundColor = [UIColor redColor];
+        IngredientsListViewController *ingredients = [self.storyboard instantiateViewControllerWithIdentifier:@"INGREDIENTS_VC"];
+        ingredients.recipeDetailId = self.recipeDetailId;
+        [self.navigationController pushViewController:ingredients animated:YES];
         NSLog(@"I am on segment Ingredients");
         
             }
