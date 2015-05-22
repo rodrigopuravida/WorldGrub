@@ -27,6 +27,7 @@
 		48A608E51AAE992E00BCE34E /* RecipeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 48A608E41AAE992E00BCE34E /* RecipeCell.m */; };
 		48A608E81AAE9C2A00BCE34E /* RecipeListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 48A608E71AAE9C2A00BCE34E /* RecipeListViewController.m */; };
 		48CBA2991B0EDCFF00BC31F1 /* IngredientsListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 48CBA2981B0EDCFF00BC31F1 /* IngredientsListViewController.m */; };
+		48CBA29F1B0EE10600BC31F1 /* IngredientsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 48CBA29E1B0EE10600BC31F1 /* IngredientsCell.m */; };
 		48E5E8E01B03F96100723575 /* Ingredients.m in Sources */ = {isa = PBXBuildFile; fileRef = 48E5E8DF1B03F96100723575 /* Ingredients.m */; };
 		CF408580CC4C8A007D5FF0CB /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 72616C04814D6DD024BEA096 /* libPods.a */; };
 /* End PBXBuildFile section */
@@ -79,6 +80,8 @@
 		48A608E71AAE9C2A00BCE34E /* RecipeListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RecipeListViewController.m; path = ../RecipeListViewController.m; sourceTree = "<group>"; };
 		48CBA2971B0EDCFF00BC31F1 /* IngredientsListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IngredientsListViewController.h; sourceTree = "<group>"; };
 		48CBA2981B0EDCFF00BC31F1 /* IngredientsListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IngredientsListViewController.m; sourceTree = "<group>"; };
+		48CBA29D1B0EE10600BC31F1 /* IngredientsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IngredientsCell.h; path = ../IngredientsCell.h; sourceTree = "<group>"; };
+		48CBA29E1B0EE10600BC31F1 /* IngredientsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IngredientsCell.m; path = ../IngredientsCell.m; sourceTree = "<group>"; };
 		48E5E8DE1B03F96100723575 /* Ingredients.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ingredients.h; sourceTree = "<group>"; };
 		48E5E8DF1B03F96100723575 /* Ingredients.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Ingredients.m; sourceTree = "<group>"; };
 		72616C04814D6DD024BEA096 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -160,6 +163,8 @@
 				4803803D1AB28B000029115D /* RecipeDetailViewController.m */,
 				4803803F1AB3C6410029115D /* SingleRecipe.h */,
 				480380401AB3C6410029115D /* SingleRecipe.m */,
+				48CBA29D1B0EE10600BC31F1 /* IngredientsCell.h */,
+				48CBA29E1B0EE10600BC31F1 /* IngredientsCell.m */,
 				48E5E8DE1B03F96100723575 /* Ingredients.h */,
 				48E5E8DF1B03F96100723575 /* Ingredients.m */,
 				48A608E31AAE992E00BCE34E /* RecipeCell.h */,
@@ -355,6 +360,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				48A608E51AAE992E00BCE34E /* RecipeCell.m in Sources */,
+				48CBA29F1B0EE10600BC31F1 /* IngredientsCell.m in Sources */,
 				482D14B51AACFDDC00366342 /* WorldGrubService.m in Sources */,
 				484EDEC21AABACA200A5B0D0 /* AppDelegate.m in Sources */,
 				480380411AB3C6410029115D /* SingleRecipe.m in Sources */,
