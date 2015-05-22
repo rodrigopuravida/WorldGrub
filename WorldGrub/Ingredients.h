@@ -10,4 +10,13 @@
 
 @interface Ingredients : NSObject
 
+@property (strong, nonatomic) NSMutableArray *extendedIngredients;
+@property (strong, nonatomic) NSString *name;
+@property (strong, nonatomic) NSString *amount;
+@property (strong, nonatomic) NSString *unit;
+@property (strong, nonatomic) NSString *unitShort;
+@property (strong, nonatomic) NSString *unitLong;
+@property (strong, nonatomic) NSString *originalString;
+@property (strong, nonatomic) NSArray *metaInformation;
+
 @end

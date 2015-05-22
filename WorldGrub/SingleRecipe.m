@@ -26,11 +26,6 @@
         recipe.recipeTitle = [jsonDictionary objectForKey:@"title"];
         recipe.extendedIngredients = [jsonDictionary objectForKey:@"extendedIngredients"];
     
-//    for (NSDictionary *item in recipe.extendedIngredients) {
-//        recipe.name = item[@"name"];
-//        
-//        [temp addObject:recipe];
-//    }
         [temp addObject:recipe];
 
     NSArray *final = [[NSArray alloc] initWithArray:temp];

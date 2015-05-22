@@ -70,12 +70,7 @@
         
         self.recipeDetails = results;
         
-//        for (NSDictionary *item in self.recipeDetails) {
-//            NSMutableArray *temp = [[NSMutableArray alloc] init];
-//            self.currentRecipe.extendedIngredients = item[@"extendedIngredients"];
-//            
-//        }
-        
+                
         
         NSLog(@"Pause");
         
