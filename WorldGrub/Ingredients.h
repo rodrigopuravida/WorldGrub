@@ -10,7 +10,9 @@
 
 @interface Ingredients : NSObject
 
-@property (strong, nonatomic) NSMutableArray *extendedIngredients;
++(NSString *) ingredientsFromJSON:(NSData *)jsonData;
+
+@property (strong, nonatomic) NSArray *extendedIngredients;
 @property (strong, nonatomic) NSString *name;
 @property (strong, nonatomic) NSString *amount;
 @property (strong, nonatomic) NSString *unit;

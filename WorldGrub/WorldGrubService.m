@@ -8,6 +8,7 @@
 
 #import "WorldGrubService.h"
 #import "Recipe.h"
+#import "Ingredients.h"
 #import "SingleRecipe.h"
 #import <UNIRest.h>
 
@@ -67,6 +68,7 @@
     
   }
 
+
 -(void)fetchRecipeBasedOnId:(NSString *)searchId completionHandler:(void (^)(NSArray *results, NSString *error))completionHandler {
     
     
@@ -107,6 +109,48 @@
     }];
     
 }
+
+-(void)fetchIngredientsBasedOnId:(NSString *)searchId completionHandler:(void (^)(NSArray *results, NSString *error))completionHandler {
+    
+    
+    NSDictionary *headers = @{@"X-Mashape-Key": @"oFNKYknS8AmshjKbSEFne7ayQxKfp1RuLPzjsnkg5bVuSajF7y", @"Accept": @"application/json"};
+    UNIUrlConnection *asyncConnection = [[UNIRest get:^(UNISimpleRequest *request) {
+        //sampe
+        //[request setUrl:@"https://webknox-recipes.p.mashape.com/recipes/156992/information"];
+        [request setUrl:searchId];
+        [request setHeaders:headers];
+    }] asJsonAsync:^(UNIHTTPJsonResponse *response, NSError *error) {
+        NSInteger code = response.code;
+        NSData *rawBody = response.rawBody;
+        
+        if (error) {
+            completionHandler(nil,@"Could not connect");
+        } else {
+            
+            switch (code) {
+                case 200 ... 299: {
+                    NSLog(@"%ld",(long)code);
+                    NSArray *results = [Ingredients ingredientsFromJSON:rawBody];
+                    
+                    dispatch_async(dispatch_get_main_queue(), ^{
+                        if (results) {
+                            completionHandler(results,nil);
+                        } else {
+                            completionHandler(nil,@"Search could not be completed");
+                        }
+                    });
+                    break;
+                }
+                default:
+                    NSLog(@"%ld",(long)code);
+                    break;
+            }
+            
+        }
+    }];
+    
+}
+
 
 
 -(void)fetchUserImage:(NSString *)avatarURL completionHandler:(void (^) (UIImage *image))completionHandler {

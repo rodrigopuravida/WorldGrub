@@ -60,25 +60,25 @@
         self.recipeImage.image = [UIImage imageWithData:data];
     }];
     
-    NSString *stringRecipeId = [NSString stringWithFormat:@"%d", self.recipeDetailId.intValue];
-    
-    //need to build this url - "https://webknox-recipes.p.mashape.com/recipes/156992/information"
-    //156992 being the id for the recipe
-    
-    NSString *queryPart1 = @"https://webknox-recipes.p.mashape.com/recipes/";
-    NSString *queryInConstruction1 = [queryPart1 stringByAppendingString:stringRecipeId];
-
-    NSString *finalQuery = [queryInConstruction1 stringByAppendingString:@"/information"];
-    
-    [[WorldGrubService sharedService] fetchRecipeBasedOnId:finalQuery completionHandler:^(NSArray *results, NSString *error) {
-        
-        self.recipeDetails = results;
-        
-                
-        
-        NSLog(@"Pause");
-        
-              }];
+//    NSString *stringRecipeId = [NSString stringWithFormat:@"%d", self.recipeDetailId.intValue];
+//    
+//    //need to build this url - "https://webknox-recipes.p.mashape.com/recipes/156992/information"
+//    //156992 being the id for the recipe
+//    
+//    NSString *queryPart1 = @"https://webknox-recipes.p.mashape.com/recipes/";
+//    NSString *queryInConstruction1 = [queryPart1 stringByAppendingString:stringRecipeId];
+//
+//    NSString *finalQuery = [queryInConstruction1 stringByAppendingString:@"/information"];
+//    
+//    [[WorldGrubService sharedService] fetchRecipeBasedOnId:finalQuery completionHandler:^(NSArray *results, NSString *error) {
+//        
+//        self.recipeDetails = results;
+//        
+//                
+//        
+//        NSLog(@"Pause");
+//        
+//              }];
     
  }
 
