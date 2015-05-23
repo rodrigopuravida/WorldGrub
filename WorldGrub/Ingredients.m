@@ -8,6 +8,8 @@
 
 #import "Ingredients.h"
 
+
+
 @implementation Ingredients
 
 +(NSArray *)ingredientsFromJSON:(NSData *)jsonData {
@@ -18,16 +20,38 @@
         NSLog(@"%@", error.localizedDescription);
         return nil;
     }
+    NSArray *items = [jsonDictionary objectForKey:@"extendedIngredients"];
     
     NSMutableArray *temp = [[NSMutableArray alloc] init];
-    Ingredients *ingredients = [[Ingredients alloc] init];
     
-    ingredients.extendedIngredients = [jsonDictionary objectForKey:@"extendedIngredients"];
-    [temp addObject:ingredients];
+    //Ingredients *ingredients = [[Ingredients alloc] init];
+    
+    for (NSDictionary *item in items) {
+        Ingredients *ingredient = [[Ingredients alloc] init];
+        ingredient.name = item[@"name"];
+        
+        [temp addObject:ingredient];
+        
+    }
     
     NSArray *final = [[NSArray alloc] initWithArray:temp];
     return final;
     
+    
+    
+    //NSArray *items = [jsonDictionary objectForKey:@"items"];
+    
+    //NSMutableArray *temp = [[NSMutableArray alloc] init];
+    
+//    for (NSDictionary *item in items) {
+//        Question *question = [[Question alloc] init];
+//        question.title = item[@"title"];
+//        NSDictionary *userInfo = item[@"owner"];
+//        question.avatarURL = userInfo[@"profile_image"];
+//        question.userId = userInfo[@"user_id"];
+//        
+//        [temp addObject:question];
+//    }
     
 }
 
