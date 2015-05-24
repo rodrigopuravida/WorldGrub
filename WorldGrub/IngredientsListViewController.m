@@ -23,10 +23,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
     self.tableView.dataSource = self;
-    self.tableView.rowHeight = UITableViewAutomaticDimension;
-    self.tableView.pagingEnabled = true;
     self.tableView.delegate = self;
     // Do any additional setup after loading the view.
         
@@ -61,7 +58,8 @@
     IngredientsCell *cell = [tableView dequeueReusableCellWithIdentifier:@"INGREDIENTS_CELL"
                                                          forIndexPath:indexPath];
     Ingredients *ingredient = self.ingredients[indexPath.row];
-    cell.nameLbl.text = ingredient.name;
+    //cell.nameLbl.text = ingredient.name;
+    cell.nameLbl.text = @"Stop";
     return cell;
 }
 
