@@ -45,6 +45,7 @@
         
         self.ingredients = results;
         NSLog(@"Stop");
+        [self.tableView reloadData];
         
     }];
     
@@ -52,14 +53,15 @@
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return self.ingredients.count;
+    
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     IngredientsCell *cell = [tableView dequeueReusableCellWithIdentifier:@"INGREDIENTS_CELL"
                                                          forIndexPath:indexPath];
     Ingredients *ingredient = self.ingredients[indexPath.row];
-    //cell.nameLbl.text = ingredient.name;
-    cell.nameLbl.text = @"Stop";
+    cell.nameLbl.text = ingredient.name;
+    //cell.nameLbl.text = @"Stop";
     return cell;
 }
 
