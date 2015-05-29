@@ -29,6 +29,7 @@
     for (NSDictionary *item in items) {
         Ingredients *ingredient = [[Ingredients alloc] init];
         ingredient.name = item[@"name"];
+        ingredient.originalString = item[@"originalString"];
         
         [temp addObject:ingredient];
         

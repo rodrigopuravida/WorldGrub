@@ -60,7 +60,7 @@
     IngredientsCell *cell = [tableView dequeueReusableCellWithIdentifier:@"INGREDIENTS_CELL"
                                                          forIndexPath:indexPath];
     Ingredients *ingredient = self.ingredients[indexPath.row];
-    cell.nameLbl.text = ingredient.name;
+    cell.nameLbl.text = ingredient.originalString;
     //cell.nameLbl.text = @"Stop";
     return cell;
 }
