@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		4803803E1AB28B000029115D /* RecipeDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4803803D1AB28B000029115D /* RecipeDetailViewController.m */; };
 		480380411AB3C6410029115D /* SingleRecipe.m in Sources */ = {isa = PBXBuildFile; fileRef = 480380401AB3C6410029115D /* SingleRecipe.m */; };
+		4820A7491B190F200037D305 /* CookingDirections.m in Sources */ = {isa = PBXBuildFile; fileRef = 4820A7481B190F200037D305 /* CookingDirections.m */; };
 		482D14AA1AABEFDA00366342 /* FoodChoicesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 482D14A91AABEFDA00366342 /* FoodChoicesViewController.m */; };
 		482D14B51AACFDDC00366342 /* WorldGrubService.m in Sources */ = {isa = PBXBuildFile; fileRef = 482D14B41AACFDDC00366342 /* WorldGrubService.m */; };
 		4848740A1ADA206A0038001D /* pasta.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 484874091ADA206A0038001D /* pasta.jpg */; };
@@ -48,6 +49,8 @@
 		4803803D1AB28B000029115D /* RecipeDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecipeDetailViewController.m; sourceTree = "<group>"; };
 		4803803F1AB3C6410029115D /* SingleRecipe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SingleRecipe.h; sourceTree = "<group>"; };
 		480380401AB3C6410029115D /* SingleRecipe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SingleRecipe.m; sourceTree = "<group>"; };
+		4820A7471B190F200037D305 /* CookingDirections.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CookingDirections.h; sourceTree = "<group>"; };
+		4820A7481B190F200037D305 /* CookingDirections.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CookingDirections.m; sourceTree = "<group>"; };
 		482D14A81AABEFDA00366342 /* FoodChoicesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FoodChoicesViewController.h; path = ../FoodChoicesViewController.h; sourceTree = "<group>"; };
 		482D14A91AABEFDA00366342 /* FoodChoicesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FoodChoicesViewController.m; path = ../FoodChoicesViewController.m; sourceTree = "<group>"; };
 		482D14AB1AABF16C00366342 /* MenuPressedDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuPressedDelegate.h; sourceTree = "<group>"; };
@@ -167,6 +170,8 @@
 				48CBA29E1B0EE10600BC31F1 /* IngredientsCell.m */,
 				48E5E8DE1B03F96100723575 /* Ingredients.h */,
 				48E5E8DF1B03F96100723575 /* Ingredients.m */,
+				4820A7471B190F200037D305 /* CookingDirections.h */,
+				4820A7481B190F200037D305 /* CookingDirections.m */,
 				48A608E31AAE992E00BCE34E /* RecipeCell.h */,
 				48A608E41AAE992E00BCE34E /* RecipeCell.m */,
 				48A608E61AAE9C1E00BCE34E /* RecipeListViewController.h */,
@@ -371,6 +376,7 @@
 				48A608E81AAE9C2A00BCE34E /* RecipeListViewController.m in Sources */,
 				48CBA2991B0EDCFF00BC31F1 /* IngredientsListViewController.m in Sources */,
 				484EDEBF1AABACA200A5B0D0 /* main.m in Sources */,
+				4820A7491B190F200037D305 /* CookingDirections.m in Sources */,
 				4803803E1AB28B000029115D /* RecipeDetailViewController.m in Sources */,
 				484EDEEF1AABE56400A5B0D0 /* MainMenuTableViewController.m in Sources */,
 				482D14AA1AABEFDA00366342 /* FoodChoicesViewController.m in Sources */,

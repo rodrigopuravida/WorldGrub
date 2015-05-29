@@ -37,23 +37,7 @@
     
     NSArray *final = [[NSArray alloc] initWithArray:temp];
     return final;
-    
-    
-    
-    //NSArray *items = [jsonDictionary objectForKey:@"items"];
-    
-    //NSMutableArray *temp = [[NSMutableArray alloc] init];
-    
-//    for (NSDictionary *item in items) {
-//        Question *question = [[Question alloc] init];
-//        question.title = item[@"title"];
-//        NSDictionary *userInfo = item[@"owner"];
-//        question.avatarURL = userInfo[@"profile_image"];
-//        question.userId = userInfo[@"user_id"];
-//        
-//        [temp addObject:question];
-//    }
-    
+        
 }
 
 @end

@@ -74,6 +74,7 @@
     recipedetail.recipeDetailId = self.recipe.recipeId;
     recipedetail.imageUrl = self.recipe.recipeURL;
     recipedetail.foodImage = self.recipe.recipeImage;
+    recipedetail.recipeUrl = self.recipe.baseUri;
 
     
     NSLog(@"RecipeId");

@@ -194,33 +194,34 @@
                                     </mask>
                                 </variation>
                             </imageView>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="IDY-QX-axD">
-                                <rect key="frame" x="24" y="557" width="552" height="29"/>
-                                <segments>
-                                    <segment title="Ingredients"/>
-                                    <segment title="Directions"/>
-                                </segments>
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="srB-pN-2Ac">
+                                <rect key="frame" x="24" y="550" width="77" height="30"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="Ingredients">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                                 <connections>
-                                    <action selector="segmentedControlAction:" destination="g91-dv-tOG" eventType="valueChanged" id="iFa-lM-8ov"/>
+                                    <action selector="displayIngredients:" destination="g91-dv-tOG" eventType="touchUpInside" id="CPB-C7-kdF"/>
                                 </connections>
-                            </segmentedControl>
+                            </button>
                         </subviews>
                         <constraints>
                             <constraint firstAttribute="centerX" secondItem="c5X-44-DYr" secondAttribute="centerX" id="8ke-kn-Sqi"/>
-                            <constraint firstItem="IDY-QX-axD" firstAttribute="trailing" secondItem="c5X-44-DYr" secondAttribute="trailing" id="I1P-cQ-rWF"/>
+                            <constraint firstItem="c5X-44-DYr" firstAttribute="leading" secondItem="srB-pN-2Ac" secondAttribute="leading" id="9yh-XC-C9H"/>
                             <constraint firstItem="iRW-aT-kEl" firstAttribute="top" secondItem="c5X-44-DYr" secondAttribute="bottom" constant="57" id="JXS-DB-r72"/>
-                            <constraint firstItem="IDY-QX-axD" firstAttribute="leading" secondItem="c5X-44-DYr" secondAttribute="leading" id="LsN-r2-8Ob"/>
                             <constraint firstAttribute="trailingMargin" secondItem="c5X-44-DYr" secondAttribute="trailing" constant="52" id="MjB-ax-Cvt"/>
                             <constraint firstAttribute="trailingMargin" secondItem="c5X-44-DYr" secondAttribute="trailing" constant="52" id="RYK-hn-MxK"/>
                             <constraint firstAttribute="trailingMargin" secondItem="c5X-44-DYr" secondAttribute="trailing" constant="8" id="ZH0-FD-e70"/>
+                            <constraint firstItem="srB-pN-2Ac" firstAttribute="top" secondItem="c5X-44-DYr" secondAttribute="bottom" constant="7" id="d50-Ib-y5E"/>
                             <constraint firstItem="iRW-aT-kEl" firstAttribute="top" secondItem="c5X-44-DYr" secondAttribute="bottom" constant="196" id="d61-q7-GIN"/>
                             <constraint firstItem="c5X-44-DYr" firstAttribute="top" secondItem="Pw9-ak-eRU" secondAttribute="bottom" constant="8" id="eJq-lI-sLS"/>
                             <constraint firstItem="c5X-44-DYr" firstAttribute="top" secondItem="Pw9-ak-eRU" secondAttribute="bottom" constant="8" symbolic="YES" id="i46-Mj-VJb"/>
                             <constraint firstItem="c5X-44-DYr" firstAttribute="top" secondItem="Pw9-ak-eRU" secondAttribute="bottom" constant="8" id="iSV-Zc-NSA"/>
-                            <constraint firstItem="IDY-QX-axD" firstAttribute="top" secondItem="c5X-44-DYr" secondAttribute="bottom" constant="14" id="kce-8Z-JfV"/>
                             <constraint firstItem="c5X-44-DYr" firstAttribute="leading" secondItem="gSE-bk-7Gm" secondAttribute="leadingMargin" constant="8" id="sFe-Kd-n59"/>
                             <constraint firstAttribute="centerY" secondItem="c5X-44-DYr" secondAttribute="centerY" id="w7H-GI-1rO"/>
                             <constraint firstItem="c5X-44-DYr" firstAttribute="leading" secondItem="gSE-bk-7Gm" secondAttribute="leadingMargin" constant="76" id="wrq-i8-BoM"/>
+                            <constraint firstItem="iRW-aT-kEl" firstAttribute="top" secondItem="srB-pN-2Ac" secondAttribute="bottom" constant="20" id="xgH-RH-Ss2"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
@@ -235,8 +236,8 @@
                         </variation>
                     </view>
                     <connections>
+                        <outlet property="ingredientsBtn" destination="srB-pN-2Ac" id="s0m-hu-0aE"/>
                         <outlet property="recipeImage" destination="c5X-44-DYr" id="uTt-56-xIB"/>
-                        <outlet property="segmentedControl" destination="IDY-QX-axD" id="FlT-bP-nGK"/>
                         <outlet property="view" destination="gSE-bk-7Gm" id="bPf-ah-JCh"/>
                     </connections>
                 </viewController>

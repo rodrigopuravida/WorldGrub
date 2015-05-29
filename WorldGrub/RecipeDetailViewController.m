@@ -13,48 +13,36 @@
 
 
 @interface RecipeDetailViewController ()
-@property (weak, nonatomic) NSString *recipeUrl;
+
 @property (strong,nonatomic) NSArray *recipeUrls;
 @property (weak, nonatomic) SingleRecipe *currentRecipe;
 @property (strong, nonatomic) IBOutlet UIView *view;
 @property (weak, nonatomic) IBOutlet UIImageView *recipeImage;
-
-@property (weak, nonatomic) IBOutlet UISegmentedControl *segmentedControl;
+@property (weak, nonatomic) IBOutlet UIButton *ingredientsBtn;
 
 @end
 
 @implementation RecipeDetailViewController
 
-- (IBAction)segmentedControlAction:(id)sender
-{
-    if(self.segmentedControl.selectedSegmentIndex == 0)
-    {
-        self.view.backgroundColor = [UIColor redColor];
-        IngredientsListViewController *ingredients = [self.storyboard instantiateViewControllerWithIdentifier:@"INGREDIENTS_VC"];
-        ingredients.recipeDetailId = self.recipeDetailId;
-        [self.navigationController pushViewController:ingredients animated:YES];
-        NSLog(@"I am on segment Ingredients");
-        
-            }
-    else
-        if(self.segmentedControl.selectedSegmentIndex == 1)
-        {
-            self.view.backgroundColor = [UIColor greenColor];
-            NSLog(@"I am on segment Directions");
-            
-        }
+
+- (IBAction)displayIngredients:(id)sender {
+    IngredientsListViewController *ingredients = [self.storyboard instantiateViewControllerWithIdentifier:@"INGREDIENTS_VC"];
+    ingredients.recipeDetailId = self.recipeDetailId;
+    [self.navigationController pushViewController:ingredients animated:YES];
+    NSLog(@"I am on segment Ingredients");
 }
+
 
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.segmentedControl.selected = NO;
     
     
     NSLog(@"RecipeId at Detail Recipe Controller");
     NSLog(@"%@",self.recipeDetailId);
     NSLog(@"%@",self.imageUrl);
+    NSLog(@"%@",self.recipeUrl);
     
     [NSURLConnection sendAsynchronousRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:self.imageUrl]] queue:[NSOperationQueue mainQueue] completionHandler:^(NSURLResponse *response, NSData *data, NSError *error) {
         self.recipeImage.image = [UIImage imageWithData:data];
