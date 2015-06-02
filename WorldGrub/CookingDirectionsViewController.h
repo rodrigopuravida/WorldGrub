@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface CookingDirectionsViewController : UIViewController
+@property (weak, nonatomic) NSString *recipeDetailId;
 
 @end

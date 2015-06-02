@@ -169,10 +169,10 @@
             </objects>
             <point key="canvasLocation" x="-481" y="-599"/>
         </scene>
-        <!--View Controller-->
+        <!--Cooking Directions View Controller-->
         <scene sceneID="A1O-dY-7p4">
             <objects>
-                <viewController id="Pmy-DY-4pm" sceneMemberID="viewController">
+                <viewController id="Pmy-DY-4pm" customClass="CookingDirectionsViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Nuk-uV-hVP"/>
                         <viewControllerLayoutGuide type="bottom" id="u5z-nd-ASB"/>
@@ -180,8 +180,24 @@
                     <view key="view" contentMode="scaleToFill" id="AmT-u6-4BP">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OZN-0G-y8m">
+                                <rect key="frame" x="16" y="37" width="568" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.16078431900000001" green="0.8980392814" blue="0.18431372939999999" alpha="1" colorSpace="deviceRGB"/>
+                        <constraints>
+                            <constraint firstItem="OZN-0G-y8m" firstAttribute="top" secondItem="Nuk-uV-hVP" secondAttribute="bottom" constant="17" id="9aN-NB-djo"/>
+                            <constraint firstItem="OZN-0G-y8m" firstAttribute="trailing" secondItem="AmT-u6-4BP" secondAttribute="trailingMargin" id="Gzp-Op-pOr"/>
+                            <constraint firstItem="OZN-0G-y8m" firstAttribute="leading" secondItem="AmT-u6-4BP" secondAttribute="leadingMargin" id="v8C-3R-TlN"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="directionsLbl" destination="OZN-0G-y8m" id="HmP-Lk-bN9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MIp-5G-vRN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -233,6 +249,9 @@
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="displayDirections:" destination="g91-dv-tOG" eventType="touchUpInside" id="jPV-Va-Mgj"/>
+                                </connections>
                             </button>
                         </subviews>
                         <constraints>

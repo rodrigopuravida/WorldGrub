@@ -10,6 +10,7 @@
 #import "WorldGrubService.h"
 #import "SingleRecipe.h"
 #import "IngredientsListViewController.h"
+#import "CookingDirectionsViewController.h"
 
 
 @interface RecipeDetailViewController ()
@@ -29,7 +30,14 @@
     IngredientsListViewController *ingredients = [self.storyboard instantiateViewControllerWithIdentifier:@"INGREDIENTS_VC"];
     ingredients.recipeDetailId = self.recipeDetailId;
     [self.navigationController pushViewController:ingredients animated:YES];
-    NSLog(@"I am on segment Ingredients");
+    NSLog(@"I am on  Ingredients");
+}
+- (IBAction)displayDirections:(id)sender {
+    CookingDirectionsViewController *directions = [self.storyboard instantiateViewControllerWithIdentifier:@"DIRECTIONS_VC"];
+    directions.recipeDetailId = self.recipeDetailId;
+    [self.navigationController pushViewController:directions animated:YES];
+    NSLog(@"I am on  Directions");
+
 }
 
 

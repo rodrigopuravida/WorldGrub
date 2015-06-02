@@ -9,6 +9,7 @@
 #import "CookingDirectionsViewController.h"
 
 @interface CookingDirectionsViewController ()
+@property (weak, nonatomic) IBOutlet UILabel *directionsLbl;
 
 @end
 
