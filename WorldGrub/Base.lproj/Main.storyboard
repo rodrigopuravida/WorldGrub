@@ -257,7 +257,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="91" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="jPj-vr-xCX">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="91" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="jPj-vr-xCX">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
@@ -301,6 +301,12 @@
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="jPj-vr-xCX" firstAttribute="top" secondItem="bBn-4H-b7z" secondAttribute="topMargin" id="Cc5-vb-J6B"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="jPj-vr-xCX" secondAttribute="trailing" constant="-16" id="mMF-XY-D75"/>
+                            <constraint firstItem="iov-OR-sIr" firstAttribute="top" secondItem="jPj-vr-xCX" secondAttribute="bottom" id="q57-Ph-96w"/>
+                            <constraint firstItem="jPj-vr-xCX" firstAttribute="leading" secondItem="bBn-4H-b7z" secondAttribute="leadingMargin" constant="-16" id="wMT-h5-lET"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="tableView" destination="jPj-vr-xCX" id="Gkm-NY-aJu"/>
