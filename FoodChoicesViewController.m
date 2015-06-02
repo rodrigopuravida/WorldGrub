@@ -81,11 +81,8 @@
         recipeList.recipeList = self.recipes;
         [self.navigationController pushViewController:recipeList animated:YES];
         
-        
     }];
-    
-
-    
+        
 }
 
 

@@ -21,6 +21,7 @@
         NSMutableArray *temp = [[NSMutableArray alloc] init];
         SingleRecipe *recipe = [[SingleRecipe alloc] init];
         recipe.recipeURL = [jsonDictionary objectForKey:@"imageUrls"];
+        recipe.sourceUrl = [jsonDictionary objectForKey:@"sourceUrl"];
         recipe.foodImage = [jsonDictionary objectForKey:@"image"];
         recipe.recipeId= [jsonDictionary objectForKey:@"id"];
         recipe.recipeTitle = [jsonDictionary objectForKey:@"title"];

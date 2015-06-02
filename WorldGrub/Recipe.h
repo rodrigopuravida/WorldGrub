@@ -19,6 +19,7 @@
 @property (strong, nonatomic) UIImage *recipeListImage;
 @property (strong, nonatomic) NSString *recipeURL;
 @property (strong, nonatomic) NSString *baseUri;
+@property (strong, nonatomic) NSString *sourceUrl;
 
 
 

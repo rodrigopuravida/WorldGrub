@@ -48,7 +48,7 @@
     cell.recipeTitle.text = self.recipe.title;
 //    self.recipeId = self.recipe.recipeId;
 //    NSLog(@"RecipeId");
-//    NSLog(@"%@",self.recipeId);
+    //NSLog(@"%@",self.recipe.sourceUrl);
     cell.recipeImage.image = nil;
     //lazy loading of image
     if (!self.recipe.recipeImage) {
@@ -75,10 +75,11 @@
     recipedetail.imageUrl = self.recipe.recipeURL;
     recipedetail.foodImage = self.recipe.recipeImage;
     recipedetail.recipeUrl = self.recipe.baseUri;
-
+    recipedetail.sourceUrl = self.recipe.sourceUrl;
     
     NSLog(@"RecipeId");
     NSLog(@"%@",self.recipeId);
+    NSLog(@"%@",self.recipe.sourceUrl);
     [self.navigationController pushViewController:recipedetail animated:YES];
 
 

@@ -13,6 +13,7 @@
 +(NSString *)recipeFromJSON:(NSData *)jsonData;
 
 @property (strong, nonatomic) NSString *recipeURL;
+@property (strong, nonatomic) NSString *sourceUrl;
 @property (strong, nonatomic) NSString *foodImage;
 @property (strong, nonatomic) NSString *recipeId;
 @property (strong, nonatomic) NSString *recipeTitle;
