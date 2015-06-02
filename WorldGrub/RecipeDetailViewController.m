@@ -20,6 +20,7 @@
 @property (strong, nonatomic) IBOutlet UIView *view;
 @property (weak, nonatomic) IBOutlet UIImageView *recipeImage;
 @property (weak, nonatomic) IBOutlet UIButton *ingredientsBtn;
+@property (weak, nonatomic) IBOutlet UIButton *directionsBtn;
 
 @end
 

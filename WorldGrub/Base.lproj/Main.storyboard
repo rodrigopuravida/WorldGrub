@@ -172,7 +172,7 @@
         <!--Cooking Directions View Controller-->
         <scene sceneID="A1O-dY-7p4">
             <objects>
-                <viewController id="Pmy-DY-4pm" customClass="CookingDirectionsViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DIRECTIONS_VC" id="Pmy-DY-4pm" customClass="CookingDirectionsViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Nuk-uV-hVP"/>
                         <viewControllerLayoutGuide type="bottom" id="u5z-nd-ASB"/>
@@ -287,6 +287,7 @@
                         </variation>
                     </view>
                     <connections>
+                        <outlet property="directionsBtn" destination="r3G-pI-la0" id="U0Z-8o-yqQ"/>
                         <outlet property="ingredientsBtn" destination="srB-pN-2Ac" id="s0m-hu-0aE"/>
                         <outlet property="recipeImage" destination="c5X-44-DYr" id="uTt-56-xIB"/>
                         <outlet property="view" destination="gSE-bk-7Gm" id="bPf-ah-JCh"/>
