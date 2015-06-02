@@ -17,6 +17,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    NSLog(@"RecipeId at Directions Controller");
+    NSLog(@"%@",self.recipeDetailId);
+    
     // Do any additional setup after loading the view.
 }
 
