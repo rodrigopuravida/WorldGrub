@@ -69,6 +69,9 @@
                 }
                 else {
                     self.directions.text = cookingDirections;
+                    [self.directions sizeToFit];
+                    self.directions.numberOfLines = 0;
+                    [self.directions sizeToFit];
                 }
                 
                 }];
