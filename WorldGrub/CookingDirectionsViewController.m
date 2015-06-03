@@ -11,8 +11,9 @@
 #import "SingleRecipe.h"
 
 @interface CookingDirectionsViewController ()
-@property (weak, nonatomic) IBOutlet UILabel *directionsLbl;
+
 @property (strong,nonatomic) SingleRecipe *myRecipe;
+@property (weak, nonatomic) IBOutlet UILabel *directions;
 
 @end
 
@@ -61,7 +62,14 @@
                 
                 NSString *cookingDirections = results;
                 NSLog(@"%@", cookingDirections);
-                self.directionsLbl.text = cookingDirections;
+                
+                if (cookingDirections == (id)[NSNull null] || cookingDirections.length == 0 ) {
+                    self.directions.text = (@"No directions found - Apologies");
+                    
+                }
+                else {
+                    self.directions.text = cookingDirections;
+                }
                 
                 }];
          

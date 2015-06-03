@@ -34,7 +34,8 @@
     NSLog(@"I am on  Ingredients");
 }
 - (IBAction)displayDirections:(id)sender {
-    CookingDirectionsViewController *directions = [self.storyboard instantiateViewControllerWithIdentifier:@"DIRECTIONS_VC"];
+    //CookingDirectionsViewController *directions = [self.storyboard instantiateViewControllerWithIdentifier:@"DIRECTIONS_VC"];
+    CookingDirectionsViewController *directions = [self.storyboard instantiateViewControllerWithIdentifier:@"TEST"];
     directions.recipeDetailId = self.recipeDetailId;
     [self.navigationController pushViewController:directions animated:YES];
     NSLog(@"I am on  Directions");

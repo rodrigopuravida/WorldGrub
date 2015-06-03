@@ -170,37 +170,39 @@
             <point key="canvasLocation" x="-481" y="-599"/>
         </scene>
         <!--Cooking Directions View Controller-->
-        <scene sceneID="A1O-dY-7p4">
+        <scene sceneID="Ehd-Xs-gsZ">
             <objects>
-                <viewController storyboardIdentifier="DIRECTIONS_VC" id="Pmy-DY-4pm" customClass="CookingDirectionsViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="TEST" id="vOS-Vl-jYo" customClass="CookingDirectionsViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Nuk-uV-hVP"/>
-                        <viewControllerLayoutGuide type="bottom" id="u5z-nd-ASB"/>
+                        <viewControllerLayoutGuide type="top" id="DG0-pi-uh1"/>
+                        <viewControllerLayoutGuide type="bottom" id="kYY-Ii-ocB"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="AmT-u6-4BP">
+                    <view key="view" contentMode="scaleToFill" id="JIF-HF-m2G">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OZN-0G-y8m">
-                                <rect key="frame" x="16" y="37" width="568" height="0.0"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x7X-3R-DmC">
+                                <rect key="frame" x="23" y="35" width="561" height="0.0"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="OZN-0G-y8m" firstAttribute="top" secondItem="Nuk-uV-hVP" secondAttribute="bottom" constant="17" id="9aN-NB-djo"/>
-                            <constraint firstItem="OZN-0G-y8m" firstAttribute="trailing" secondItem="AmT-u6-4BP" secondAttribute="trailingMargin" id="Gzp-Op-pOr"/>
-                            <constraint firstItem="OZN-0G-y8m" firstAttribute="leading" secondItem="AmT-u6-4BP" secondAttribute="leadingMargin" id="v8C-3R-TlN"/>
+                            <constraint firstItem="x7X-3R-DmC" firstAttribute="top" secondItem="DG0-pi-uh1" secondAttribute="bottom" constant="15" id="4Xc-Uq-k2P"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="x7X-3R-DmC" secondAttribute="trailing" id="BWw-Yz-b5k"/>
+                            <constraint firstItem="x7X-3R-DmC" firstAttribute="top" secondItem="DG0-pi-uh1" secondAttribute="bottom" constant="15" id="Ulp-oW-Hcw"/>
+                            <constraint firstItem="x7X-3R-DmC" firstAttribute="leading" secondItem="JIF-HF-m2G" secondAttribute="leadingMargin" constant="7" id="aEG-qg-UGJ"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="directionsLbl" destination="OZN-0G-y8m" id="HmP-Lk-bN9"/>
+                        <outlet property="directions" destination="x7X-3R-DmC" id="k4C-8D-8J9"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="MIp-5G-vRN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oaM-ET-I8c" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="163" y="-1245"/>
+            <point key="canvasLocation" x="-511" y="-1375"/>
         </scene>
         <!--Recipe Detail View Controller-->
         <scene sceneID="VHI-rn-HqT">
