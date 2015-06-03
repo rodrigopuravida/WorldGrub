@@ -18,7 +18,7 @@
         NSLog(@"%@", error.localizedDescription);
         return nil;
     }
-    NSString *directions = [jsonDictionary objectForKey:@"sourceUrl"];
+    NSString *directions = [jsonDictionary objectForKey:@"text"];
     
     return directions;
     

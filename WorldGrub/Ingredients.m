@@ -24,9 +24,7 @@
     
     NSMutableArray *temp = [[NSMutableArray alloc] init];
     
-    //Ingredients *ingredients = [[Ingredients alloc] init];
-    
-    for (NSDictionary *item in items) {
+        for (NSDictionary *item in items) {
         Ingredients *ingredient = [[Ingredients alloc] init];
         ingredient.name = item[@"name"];
         ingredient.originalString = item[@"originalString"];

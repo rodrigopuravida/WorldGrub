@@ -10,5 +10,6 @@
 
 @interface CookingDirectionsViewController : UIViewController
 @property (weak, nonatomic) NSString *recipeDetailId;
+@property (weak, nonatomic) NSString *recipeUrlOriginal;
 
 @end

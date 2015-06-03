@@ -41,7 +41,31 @@
             NSLog(@"WebSite URL");
             NSLog(@"%@", self.myRecipe.sourceUrl);
             
+            self.recipeUrlOriginal = self.myRecipe.sourceUrl;
+            //replacing ://
+            self.recipeUrlOriginal = [self.recipeUrlOriginal stringByReplacingOccurrencesOfString:@"://"
+                                                                                       withString:@"%3A%2F%2F"];
+            
+            //replacing /
+            self.recipeUrlOriginal = [self.recipeUrlOriginal stringByReplacingOccurrencesOfString:@"/"
+                                                                                       withString:@"%2F"];
+            
+            NSLog(@"Building query to get directions based on url");
+            NSLog(@"%@", self.recipeUrlOriginal);
+            
+            NSString *baserUrl = @"https://webknox-recipes.p.mashape.com/recipes/extract?url=";
+            NSString *queryForDirections = [baserUrl stringByAppendingString:self.recipeUrlOriginal];
+            NSLog(@"%@", queryForDirections);
+            
+            
         }];
+    
+    
+    
+    
+    
+    
+    
     
     // Do any additional setup after loading the view.
 }
