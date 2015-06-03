@@ -10,7 +10,7 @@
 
 @implementation SingleRecipe
 
-+(NSArray *)recipeFromJSON:(NSData *)jsonData {
++(SingleRecipe *)recipeFromJSON:(NSData *)jsonData {
     
     NSError *error;
     NSDictionary *jsonDictionary = [NSJSONSerialization JSONObjectWithData:jsonData options:0 error:&error];
@@ -18,18 +18,17 @@
         NSLog(@"%@", error.localizedDescription);
         return nil;
     }    
-        NSMutableArray *temp = [[NSMutableArray alloc] init];
+        //NSMutableArray *temp = [[NSMutableArray alloc] init];
         SingleRecipe *recipe = [[SingleRecipe alloc] init];
         recipe.recipeURL = [jsonDictionary objectForKey:@"imageUrls"];
         recipe.sourceUrl = [jsonDictionary objectForKey:@"sourceUrl"];
         recipe.foodImage = [jsonDictionary objectForKey:@"image"];
         recipe.recipeId= [jsonDictionary objectForKey:@"id"];
         recipe.recipeTitle = [jsonDictionary objectForKey:@"title"];
-        recipe.extendedIngredients = [jsonDictionary objectForKey:@"extendedIngredients"];
     
-        [temp addObject:recipe];
+        //[temp addObject:recipe];
 
-    NSArray *final = [[NSArray alloc] initWithArray:temp];
-    return final;
+    //NSArray *final = [[NSArray alloc] initWithArray:temp];
+    return recipe;
 }
 @end

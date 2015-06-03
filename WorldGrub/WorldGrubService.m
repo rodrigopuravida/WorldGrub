@@ -70,7 +70,7 @@
   }
 
 
--(void)fetchRecipeBasedOnId:(NSString *)searchId completionHandler:(void (^)(NSArray *results, NSString *error))completionHandler {
+-(void)fetchRecipeBasedOnId:(NSString *)searchId completionHandler:(void (^)(SingleRecipe *results, NSString *error))completionHandler {
     
     
     NSDictionary *headers = @{@"X-Mashape-Key": @"oFNKYknS8AmshjKbSEFne7ayQxKfp1RuLPzjsnkg5bVuSajF7y", @"Accept": @"application/json"};
@@ -90,7 +90,7 @@
             switch (code) {
                 case 200 ... 299: {
                     NSLog(@"%ld",(long)code);
-                    NSArray *results = [SingleRecipe recipeFromJSON:rawBody];
+                    SingleRecipe *results = [SingleRecipe recipeFromJSON:rawBody];
                     
                     dispatch_async(dispatch_get_main_queue(), ^{
                         if (results) {

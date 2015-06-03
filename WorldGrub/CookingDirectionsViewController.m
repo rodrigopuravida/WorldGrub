@@ -7,9 +7,12 @@
 //
 
 #import "CookingDirectionsViewController.h"
+#import "WorldGrubService.h"
+#import "SingleRecipe.h"
 
 @interface CookingDirectionsViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *directionsLbl;
+@property (strong,nonatomic) SingleRecipe *myRecipe;
 
 @end
 
@@ -20,6 +23,25 @@
     
     NSLog(@"RecipeId at Directions Controller");
     NSLog(@"%@",self.recipeDetailId);
+    
+        NSString *stringRecipeId = [NSString stringWithFormat:@"%d", self.recipeDetailId.intValue];
+    
+        //need to build this url - "https://webknox-recipes.p.mashape.com/recipes/156992/information"
+        //156992 being the id for the recipe
+    
+        NSString *queryPart1 = @"https://webknox-recipes.p.mashape.com/recipes/";
+        NSString *queryInConstruction1 = [queryPart1 stringByAppendingString:stringRecipeId];
+    
+        NSString *finalQuery = [queryInConstruction1 stringByAppendingString:@"/information"];
+    
+        [[WorldGrubService sharedService] fetchRecipeBasedOnId:finalQuery completionHandler:^(SingleRecipe *results, NSString *error) {
+    
+           self.myRecipe = results;
+ 
+            NSLog(@"WebSite URL");
+            NSLog(@"%@", self.myRecipe.sourceUrl);
+            
+        }];
     
     // Do any additional setup after loading the view.
 }

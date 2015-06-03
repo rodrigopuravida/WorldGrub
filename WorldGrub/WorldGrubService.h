@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
+#import "SingleRecipe.h"
 
 @interface WorldGrubService : NSObject
 
@@ -15,7 +16,7 @@
 
 -(void)fetchRecipesWithSearchTerm:(NSString *)searchTerm completionHandler:(void (^)(NSArray *results, NSString *error))completionHandler;
 
--(void)fetchRecipeBasedOnId:(NSString *)searchId completionHandler:(void (^)(NSArray *results, NSString *error))completionHandler;
+-(void)fetchRecipeBasedOnId:(NSString *)searchId completionHandler:(void (^)(SingleRecipe *results, NSString *error))completionHandler;
 
 -(void)fetchIngredientsBasedOnId:(NSString *)searchId completionHandler:(void (^)(NSArray *results, NSString *error))completionHandler;
 
