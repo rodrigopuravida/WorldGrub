@@ -57,16 +57,17 @@
             NSString *queryForDirections = [baserUrl stringByAppendingString:self.recipeUrlOriginal];
             NSLog(@"%@", queryForDirections);
             
-            
+            [[WorldGrubService sharedService] fetchDirectionsBasedOnUrl:queryForDirections completionHandler:^(NSString *results, NSString *error) {
+                
+                NSString *cookingDirections = results;
+                NSLog(@"%@", cookingDirections);
+                self.directionsLbl.text = cookingDirections;
+                
+                }];
+         
         }];
     
-    
-    
-    
-    
-    
-    
-    
+   
     // Do any additional setup after loading the view.
 }
 

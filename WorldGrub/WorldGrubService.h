@@ -20,6 +20,8 @@
 
 -(void)fetchIngredientsBasedOnId:(NSString *)searchId completionHandler:(void (^)(NSArray *results, NSString *error))completionHandler;
 
+-(void)fetchDirectionsBasedOnUrl:(NSString *)recipeUrl completionHandler:(void (^)(NSString *results, NSString *error))completionHandler;
+
 -(void)fetchUserImage:(NSString *)avatarURL completionHandler:(void (^)(UIImage *image))completionHandler;
 
 
