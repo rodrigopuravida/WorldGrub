@@ -45,7 +45,14 @@
     RecipeCell *cell = [tableView dequeueReusableCellWithIdentifier:@"RECIPE_CELL"
                                                          forIndexPath:indexPath];
     self.recipe = self.recipeList[indexPath.row];
-    cell.recipeTitle.text = self.recipe.title;
+    
+    if (self.recipeList.count == 0) {
+        cell.recipeTitle.text = @"No recipes found - Apologies";
+    }
+    else {
+        cell.recipeTitle.text = self.recipe.title;
+    }
+    
 //    self.recipeId = self.recipe.recipeId;
 //    NSLog(@"RecipeId");
     //NSLog(@"%@",self.recipe.sourceUrl);

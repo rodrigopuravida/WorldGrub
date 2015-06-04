@@ -16,5 +16,6 @@
 @property (weak, nonatomic) NSString *sourceUrl;
 @property (strong, nonatomic) UIImage *foodImage;
 @property (strong, nonatomic) NSMutableArray *recipeIngredients;
+@property (weak, nonatomic) NSString *recipeUrlOriginal;
 
 @end

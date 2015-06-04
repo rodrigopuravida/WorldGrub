@@ -34,12 +34,49 @@
     NSLog(@"I am on  Ingredients");
 }
 - (IBAction)displayDirections:(id)sender {
-    //CookingDirectionsViewController *directions = [self.storyboard instantiateViewControllerWithIdentifier:@"DIRECTIONS_VC"];
-    CookingDirectionsViewController *directions = [self.storyboard instantiateViewControllerWithIdentifier:@"TEST"];
-    directions.recipeDetailId = self.recipeDetailId;
-    [self.navigationController pushViewController:directions animated:YES];
-    NSLog(@"I am on  Directions");
-
+    
+    NSString *stringRecipeId = [NSString stringWithFormat:@"%d", self.recipeDetailId.intValue];
+    //need to build this url - "https://webknox-recipes.p.mashape.com/recipes/156992/information"
+    //156992 being the id for the recipe
+    
+    NSString *queryPart1 = @"https://webknox-recipes.p.mashape.com/recipes/";
+    NSString *queryInConstruction1 = [queryPart1 stringByAppendingString:stringRecipeId];
+    
+    NSString *finalQuery = [queryInConstruction1 stringByAppendingString:@"/information"];
+    
+    [[WorldGrubService sharedService] fetchRecipeBasedOnId:finalQuery completionHandler:^(SingleRecipe *results, NSString *error) {
+        
+        self.currentRecipe = results;
+        
+        NSLog(@"WebSite URL");
+        NSLog(@"%@", self.currentRecipe.sourceUrl);
+        
+        self.recipeUrlOriginal = self.currentRecipe.sourceUrl;
+        //replacing ://
+        self.recipeUrlOriginal = [self.recipeUrlOriginal stringByReplacingOccurrencesOfString:@"://"
+                                                                                   withString:@"%3A%2F%2F"];
+        
+        //replacing /
+        self.recipeUrlOriginal = [self.recipeUrlOriginal stringByReplacingOccurrencesOfString:@"/"
+                                                                                   withString:@"%2F"];
+        
+        NSLog(@"Building query to get directions based on url");
+        NSLog(@"%@", self.recipeUrlOriginal);
+        
+        NSString *baserUrl = @"https://webknox-recipes.p.mashape.com/recipes/extract?url=";
+        NSString *queryForDirections = [baserUrl stringByAppendingString:self.recipeUrlOriginal];
+        NSLog(@"%@", queryForDirections);
+        
+        
+        
+        CookingDirectionsViewController *directions = [self.storyboard instantiateViewControllerWithIdentifier:@"TEST"];
+        directions.recipeDetailId = self.recipeDetailId;
+        directions.recipeUrl = queryForDirections;
+        [self.navigationController pushViewController:directions animated:YES];
+        NSLog(@"I am on  Directions");
+       }];
+ 
+    
 }
 
 
@@ -57,27 +94,7 @@
     [NSURLConnection sendAsynchronousRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:self.imageUrl]] queue:[NSOperationQueue mainQueue] completionHandler:^(NSURLResponse *response, NSData *data, NSError *error) {
         self.recipeImage.image = [UIImage imageWithData:data];
     }];
-    
-//    NSString *stringRecipeId = [NSString stringWithFormat:@"%d", self.recipeDetailId.intValue];
-//    
-//    //need to build this url - "https://webknox-recipes.p.mashape.com/recipes/156992/information"
-//    //156992 being the id for the recipe
-//    
-//    NSString *queryPart1 = @"https://webknox-recipes.p.mashape.com/recipes/";
-//    NSString *queryInConstruction1 = [queryPart1 stringByAppendingString:stringRecipeId];
-//
-//    NSString *finalQuery = [queryInConstruction1 stringByAppendingString:@"/information"];
-//    
-//    [[WorldGrubService sharedService] fetchRecipeBasedOnId:finalQuery completionHandler:^(NSArray *results, NSString *error) {
-//        
-//        self.recipeDetails = results;
-//        
-//                
-//        
-//        NSLog(@"Pause");
-//        
-//              }];
-    
+        
  }
 
 - (void)didReceiveMemoryWarning {
