@@ -13,7 +13,8 @@
 @interface CookingDirectionsViewController ()
 
 @property (strong,nonatomic) SingleRecipe *myRecipe;
-@property (weak, nonatomic) IBOutlet UILabel *directions;
+
+@property (weak, nonatomic) IBOutlet UITextView *directions;
 
 @end
 
@@ -58,9 +59,9 @@
 //            NSString *queryForDirections = [baserUrl stringByAppendingString:self.recipeUrlOriginal];
 //            NSLog(@"%@", queryForDirections);
     
-            NSString *queryForDirections = self.recipeUrl;
+            //self.queryForDirections = self.recipeUrl;
     
-            [[WorldGrubService sharedService] fetchDirectionsBasedOnUrl:queryForDirections completionHandler:^(NSString *results, NSString *error) {
+            [[WorldGrubService sharedService] fetchDirectionsBasedOnUrl:self.recipeUrl completionHandler:^(NSString *results, NSString *error) {
                 
                 NSString *cookingDirections = results;
                 NSLog(@"%@", cookingDirections);
@@ -71,9 +72,6 @@
                 }
                 else {
                     self.directions.text = cookingDirections;
-                    [self.directions sizeToFit];
-                    self.directions.numberOfLines = 0;
-                    [self.directions sizeToFit];
                 }
                 
                 }];

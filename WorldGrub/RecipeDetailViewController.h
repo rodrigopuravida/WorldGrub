@@ -10,12 +10,13 @@
 
 @interface RecipeDetailViewController : UIViewController
 
-@property (weak, nonatomic) NSString *recipeDetailId;
-@property (weak, nonatomic) NSString *imageUrl;
-@property (weak, nonatomic) NSString *recipeUrl;
-@property (weak, nonatomic) NSString *sourceUrl;
+@property (strong, nonatomic) NSString *recipeDetailId;
+@property (strong, nonatomic) NSString *queryForDirections;
+@property (strong, nonatomic) NSString *imageUrl;
+@property (strong, nonatomic) NSString *recipeUrl;
+@property (strong, nonatomic) NSString *sourceUrl;
 @property (strong, nonatomic) UIImage *foodImage;
 @property (strong, nonatomic) NSMutableArray *recipeIngredients;
-@property (weak, nonatomic) NSString *recipeUrlOriginal;
+@property (strong, nonatomic) NSString *recipeUrlOriginal;
 
 @end

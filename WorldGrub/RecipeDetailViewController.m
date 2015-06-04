@@ -16,11 +16,11 @@
 @interface RecipeDetailViewController ()
 
 @property (strong,nonatomic) NSArray *recipeUrls;
-@property (weak, nonatomic) SingleRecipe *currentRecipe;
+@property (strong, nonatomic) SingleRecipe *currentRecipe;
 @property (strong, nonatomic) IBOutlet UIView *view;
-@property (weak, nonatomic) IBOutlet UIImageView *recipeImage;
-@property (weak, nonatomic) IBOutlet UIButton *ingredientsBtn;
-@property (weak, nonatomic) IBOutlet UIButton *directionsBtn;
+@property (strong, nonatomic) IBOutlet UIImageView *recipeImage;
+@property (strong, nonatomic) IBOutlet UIButton *ingredientsBtn;
+@property (strong, nonatomic) IBOutlet UIButton *directionsBtn;
 
 @end
 
@@ -64,14 +64,14 @@
         NSLog(@"%@", self.recipeUrlOriginal);
         
         NSString *baserUrl = @"https://webknox-recipes.p.mashape.com/recipes/extract?url=";
-        NSString *queryForDirections = [baserUrl stringByAppendingString:self.recipeUrlOriginal];
-        NSLog(@"%@", queryForDirections);
+        self.recipeUrl = [baserUrl stringByAppendingString:self.recipeUrlOriginal];
+        NSLog(@"%@", self.recipeUrl);
         
         
         
         CookingDirectionsViewController *directions = [self.storyboard instantiateViewControllerWithIdentifier:@"TEST"];
         directions.recipeDetailId = self.recipeDetailId;
-        directions.recipeUrl = queryForDirections;
+        directions.recipeUrl = self.recipeUrl;
         [self.navigationController pushViewController:directions animated:YES];
         NSLog(@"I am on  Directions");
        }];

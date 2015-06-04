@@ -181,23 +181,24 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x7X-3R-DmC">
-                                <rect key="frame" x="23" y="35" width="561" height="0.0"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IS0-8Z-BER">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="x7X-3R-DmC" firstAttribute="top" secondItem="DG0-pi-uh1" secondAttribute="bottom" constant="15" id="4Xc-Uq-k2P"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="x7X-3R-DmC" secondAttribute="trailing" id="BWw-Yz-b5k"/>
-                            <constraint firstItem="x7X-3R-DmC" firstAttribute="top" secondItem="DG0-pi-uh1" secondAttribute="bottom" constant="15" id="Ulp-oW-Hcw"/>
-                            <constraint firstItem="x7X-3R-DmC" firstAttribute="leading" secondItem="JIF-HF-m2G" secondAttribute="leadingMargin" constant="7" id="aEG-qg-UGJ"/>
+                            <constraint firstItem="kYY-Ii-ocB" firstAttribute="top" secondItem="IS0-8Z-BER" secondAttribute="bottom" id="JwA-l0-tHd"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="IS0-8Z-BER" secondAttribute="trailing" constant="-16" id="gKA-6N-Y5f"/>
+                            <constraint firstItem="IS0-8Z-BER" firstAttribute="top" secondItem="JIF-HF-m2G" secondAttribute="topMargin" id="pl0-Yd-ozy"/>
+                            <constraint firstItem="IS0-8Z-BER" firstAttribute="leading" secondItem="JIF-HF-m2G" secondAttribute="leadingMargin" constant="-16" id="tN9-ML-3fW"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="directions" destination="x7X-3R-DmC" id="k4C-8D-8J9"/>
+                        <outlet property="directions" destination="IS0-8Z-BER" id="fGk-g7-QZm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oaM-ET-I8c" userLabel="First Responder" sceneMemberID="firstResponder"/>
