@@ -30,7 +30,18 @@
                 NSLog(@"%@", cookingDirections);
                 
                 if (cookingDirections == (id)[NSNull null] || cookingDirections.length == 0 ) {
-                    self.directions.text = (@"No directions found - Apologies");
+                    
+                    self.recipeUrl = [self.recipeUrl stringByReplacingOccurrencesOfString:@"forceExtraction=false"
+                                                                                               withString:@"forceExtraction=true"];
+                    
+                    [[WorldGrubService sharedService] fetchDirectionsBasedOnUrl:self.recipeUrl completionHandler:^(NSString *results, NSString *error) {
+                        
+                        NSString *cookingDirections = results;
+                        self.directions.text = cookingDirections;
+                        
+                        }];
+
+                    //self.directions.text = (@"No directions found - Apologies");
                     
                 }
                 else {

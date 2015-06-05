@@ -64,7 +64,7 @@
         NSLog(@"Building query to get directions based on url");
         NSLog(@"%@", self.recipeUrlOriginal);
         
-        NSString *baserUrl = @"https://webknox-recipes.p.mashape.com/recipes/extract?url=";
+        NSString *baserUrl = @"https://webknox-recipes.p.mashape.com/recipes/extract?forceExtraction=false&url=";
         self.recipeUrl = [baserUrl stringByAppendingString:self.recipeUrlOriginal];
         NSLog(@"%@", self.recipeUrl);
         
