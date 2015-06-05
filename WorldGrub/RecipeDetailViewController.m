@@ -18,7 +18,7 @@
 
 @property (strong,nonatomic) NSArray *recipeUrls;
 @property (strong, nonatomic) SingleRecipe *currentRecipe;
-@property (strong, nonatomic) IBOutlet UIView *view;
+//@property (strong, nonatomic) IBOutlet UIView *view;
 @property (strong, nonatomic) IBOutlet UIImageView *recipeImage;
 @property (strong, nonatomic) IBOutlet UIButton *ingredientsBtn;
 @property (strong, nonatomic) IBOutlet UIButton *directionsBtn;

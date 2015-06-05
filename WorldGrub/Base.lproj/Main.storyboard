@@ -14,7 +14,8 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="separatorColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                        <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <color key="sectionIndexColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="sectionIndexBackgroundColor" red="0.52899952210000001" green="1" blue="0.55026217629999996" alpha="1" colorSpace="calibratedRGB"/>
                         <sections>
                             <tableViewSection id="y3C-xz-MiA">
                                 <cells>
@@ -30,7 +31,6 @@
                                                         <constraint firstAttribute="width" constant="183" id="dfA-gf-Qub"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -39,7 +39,7 @@
                                                 <constraint firstItem="6RB-Cu-uOl" firstAttribute="leading" secondItem="fs7-G5-rW4" secondAttribute="leadingMargin" constant="18" id="cMX-Rt-hBk"/>
                                             </constraints>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <color key="backgroundColor" red="0.52899952210000001" green="1" blue="0.55026217629999996" alpha="1" colorSpace="calibratedRGB"/>
                                         <connections>
                                             <segue destination="daS-q4-L89" kind="show" id="gFE-O3-Pss"/>
                                         </connections>
@@ -56,7 +56,6 @@
                                                         <constraint firstAttribute="width" constant="120" id="R1f-0I-vRy"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -230,8 +229,8 @@
                                     </mask>
                                 </variation>
                             </imageView>
-                            <button opaque="NO" contentMode="center" misplaced="YES" contentHorizontalAlignment="fill" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="srB-pN-2Ac">
-                                <rect key="frame" x="24" y="550" width="101" height="30"/>
+                            <button opaque="NO" contentMode="center" contentHorizontalAlignment="fill" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="srB-pN-2Ac">
+                                <rect key="frame" x="24" y="550" width="77" height="30"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <state key="normal" title="Ingredients">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -241,8 +240,8 @@
                                     <action selector="displayIngredients:" destination="g91-dv-tOG" eventType="touchUpInside" id="CPB-C7-kdF"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="center" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r3G-pI-la0">
-                                <rect key="frame" x="475" y="550" width="101" height="30"/>
+                            <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r3G-pI-la0">
+                                <rect key="frame" x="507" y="550" width="69" height="30"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <state key="normal" title="Directions">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -362,45 +361,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="aYQ-zI-qrf">
+                            <pickerView contentMode="center" translatesAutoresizingMaskIntoConstraints="NO" id="wV6-W4-5QR">
+                                <rect key="frame" x="140" y="151" width="320" height="162"/>
+                                <color key="backgroundColor" red="0.39215686274509803" green="0.87450980392156863" blue="0.90588235294117647" alpha="1" colorSpace="calibratedRGB"/>
+                            </pickerView>
+                            <searchBar contentMode="redraw" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aYQ-zI-qrf">
                                 <rect key="frame" x="0.0" y="64" width="600" height="44"/>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
-                            <pickerView contentMode="center" translatesAutoresizingMaskIntoConstraints="NO" id="wV6-W4-5QR">
-                                <rect key="frame" x="107" y="151" width="386" height="162"/>
-                                <color key="backgroundColor" red="0.39215686274509803" green="0.87450980392156863" blue="0.90588235294117647" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="386" id="6rj-Zo-iae"/>
-                                    <constraint firstAttribute="height" constant="162" id="ikF-sp-q6b"/>
-                                    <constraint firstAttribute="height" constant="80" id="isN-Tb-rWG"/>
-                                    <constraint firstAttribute="width" constant="386" id="nQn-8r-9QE"/>
-                                </constraints>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="isN-Tb-rWG"/>
-                                    </mask>
-                                </variation>
-                            </pickerView>
                         </subviews>
                         <color key="backgroundColor" red="0.39215686274509803" green="0.87450980392156863" blue="0.90588235294117647" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="aYQ-zI-qrf" firstAttribute="leading" secondItem="yD0-fW-jc0" secondAttribute="leadingMargin" constant="-16" id="4kB-1u-jFn"/>
-                            <constraint firstItem="aYQ-zI-qrf" firstAttribute="top" secondItem="h8c-Ag-Q3O" secondAttribute="bottom" id="7mO-DV-vow"/>
-                            <constraint firstItem="O3E-39-7di" firstAttribute="top" secondItem="wV6-W4-5QR" secondAttribute="bottom" constant="287" id="JCj-Ns-RU0"/>
-                            <constraint firstItem="wV6-W4-5QR" firstAttribute="top" secondItem="aYQ-zI-qrf" secondAttribute="bottom" constant="43" id="OzZ-ZM-0BX"/>
-                            <constraint firstAttribute="centerX" secondItem="wV6-W4-5QR" secondAttribute="centerX" id="Ucu-ru-2Kf"/>
-                            <constraint firstAttribute="centerY" secondItem="wV6-W4-5QR" secondAttribute="centerY" id="aDF-OA-ffO"/>
-                            <constraint firstAttribute="centerX" secondItem="wV6-W4-5QR" secondAttribute="centerX" id="fgu-H1-sLE"/>
-                            <constraint firstAttribute="centerX" secondItem="wV6-W4-5QR" secondAttribute="centerX" id="nnd-yK-0Lc"/>
-                            <constraint firstItem="wV6-W4-5QR" firstAttribute="top" secondItem="h8c-Ag-Q3O" secondAttribute="bottom" constant="69" id="qtb-iu-dry"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="aYQ-zI-qrf" secondAttribute="trailing" constant="-16" id="xA1-ae-OET"/>
+                            <constraint firstAttribute="centerY" secondItem="wV6-W4-5QR" secondAttribute="centerY" constant="68" id="3eM-3d-bqc"/>
+                            <constraint firstAttribute="centerX" secondItem="wV6-W4-5QR" secondAttribute="centerX" id="J0v-hZ-rp5"/>
                         </constraints>
-                        <variation key="default">
-                            <mask key="constraints">
-                                <exclude reference="aDF-OA-ffO"/>
-                                <exclude reference="qtb-iu-dry"/>
-                            </mask>
-                        </variation>
                     </view>
                     <connections>
                         <outlet property="countryPickerView" destination="wV6-W4-5QR" id="YNG-nj-8BC"/>
