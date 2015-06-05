@@ -11,6 +11,7 @@
 #import "SingleRecipe.h"
 #import "IngredientsListViewController.h"
 #import "CookingDirectionsViewController.h"
+#import <QuartzCore/QuartzCore.h>
 
 
 @interface RecipeDetailViewController ()
@@ -84,6 +85,27 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    //setting up the buttons
+    
+    self.ingredientsBtn.layer.borderColor = [UIColor blackColor].CGColor;
+    
+    self.ingredientsBtn.layer.backgroundColor = [UIColor grayColor].CGColor;
+    
+    self.ingredientsBtn.layer.borderWidth = 2.0;
+    
+    self.ingredientsBtn.layer.cornerRadius = 15;
+    
+    self.directionsBtn.layer.borderColor = [UIColor blackColor].CGColor;
+    
+    self.directionsBtn.layer.backgroundColor = [UIColor grayColor].CGColor;
+    
+    self.directionsBtn.layer.borderWidth = 2.0;
+    
+    self.directionsBtn.layer.cornerRadius = 15;
+
+    
+    
     
     
     NSLog(@"RecipeId at Detail Recipe Controller");
