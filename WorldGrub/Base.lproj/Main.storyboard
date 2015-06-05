@@ -241,12 +241,9 @@
                                     <action selector="displayIngredients:" destination="g91-dv-tOG" eventType="touchUpInside" id="CPB-C7-kdF"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r3G-pI-la0">
-                                <rect key="frame" x="174" y="550" width="77" height="30"/>
+                            <button opaque="NO" contentMode="scaleAspectFit" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r3G-pI-la0">
+                                <rect key="frame" x="499" y="550" width="77" height="30"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="77" id="FHl-Dc-BGY"/>
-                                </constraints>
                                 <state key="normal" title="Directions">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -256,37 +253,20 @@
                                 </connections>
                             </button>
                         </subviews>
+                        <color key="backgroundColor" red="0.52899952205462808" green="1" blue="0.55026217627598772" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstAttribute="centerX" secondItem="c5X-44-DYr" secondAttribute="centerX" id="8ke-kn-Sqi"/>
-                            <constraint firstItem="r3G-pI-la0" firstAttribute="leading" secondItem="srB-pN-2Ac" secondAttribute="trailing" constant="73" id="9ng-GF-ARc"/>
                             <constraint firstItem="c5X-44-DYr" firstAttribute="leading" secondItem="srB-pN-2Ac" secondAttribute="leading" id="9yh-XC-C9H"/>
                             <constraint firstItem="iRW-aT-kEl" firstAttribute="top" secondItem="c5X-44-DYr" secondAttribute="bottom" constant="57" id="JXS-DB-r72"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="c5X-44-DYr" secondAttribute="trailing" constant="52" id="MjB-ax-Cvt"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="c5X-44-DYr" secondAttribute="trailing" constant="52" id="RYK-hn-MxK"/>
                             <constraint firstAttribute="trailingMargin" secondItem="c5X-44-DYr" secondAttribute="trailing" constant="8" id="ZH0-FD-e70"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="r3G-pI-la0" secondAttribute="trailing" constant="8" id="aUu-uX-bFM"/>
                             <constraint firstItem="r3G-pI-la0" firstAttribute="bottom" secondItem="srB-pN-2Ac" secondAttribute="bottom" id="cMY-Dh-ADm"/>
                             <constraint firstItem="srB-pN-2Ac" firstAttribute="top" secondItem="c5X-44-DYr" secondAttribute="bottom" constant="7" id="d50-Ib-y5E"/>
-                            <constraint firstItem="iRW-aT-kEl" firstAttribute="top" secondItem="c5X-44-DYr" secondAttribute="bottom" constant="196" id="d61-q7-GIN"/>
-                            <constraint firstItem="c5X-44-DYr" firstAttribute="top" secondItem="Pw9-ak-eRU" secondAttribute="bottom" constant="8" id="eJq-lI-sLS"/>
                             <constraint firstItem="c5X-44-DYr" firstAttribute="top" secondItem="Pw9-ak-eRU" secondAttribute="bottom" constant="8" symbolic="YES" id="i46-Mj-VJb"/>
                             <constraint firstItem="c5X-44-DYr" firstAttribute="top" secondItem="Pw9-ak-eRU" secondAttribute="bottom" constant="8" id="iSV-Zc-NSA"/>
                             <constraint firstItem="r3G-pI-la0" firstAttribute="top" secondItem="srB-pN-2Ac" secondAttribute="top" id="lqT-ok-gEF"/>
                             <constraint firstItem="c5X-44-DYr" firstAttribute="leading" secondItem="gSE-bk-7Gm" secondAttribute="leadingMargin" constant="8" id="sFe-Kd-n59"/>
-                            <constraint firstAttribute="centerY" secondItem="c5X-44-DYr" secondAttribute="centerY" id="w7H-GI-1rO"/>
-                            <constraint firstItem="c5X-44-DYr" firstAttribute="leading" secondItem="gSE-bk-7Gm" secondAttribute="leadingMargin" constant="76" id="wrq-i8-BoM"/>
                             <constraint firstItem="iRW-aT-kEl" firstAttribute="top" secondItem="srB-pN-2Ac" secondAttribute="bottom" constant="20" id="xgH-RH-Ss2"/>
                         </constraints>
-                        <variation key="default">
-                            <mask key="constraints">
-                                <exclude reference="8ke-kn-Sqi"/>
-                                <exclude reference="MjB-ax-Cvt"/>
-                                <exclude reference="RYK-hn-MxK"/>
-                                <exclude reference="eJq-lI-sLS"/>
-                                <exclude reference="w7H-GI-1rO"/>
-                                <exclude reference="wrq-i8-BoM"/>
-                                <exclude reference="d61-q7-GIN"/>
-                            </mask>
-                        </variation>
                     </view>
                     <connections>
                         <outlet property="directionsBtn" destination="r3G-pI-la0" id="U0Z-8o-yqQ"/>
