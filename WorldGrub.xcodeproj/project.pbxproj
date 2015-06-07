@@ -28,6 +28,8 @@
 		48A608DF1AAE852A00BCE34E /* Recipe.m in Sources */ = {isa = PBXBuildFile; fileRef = 48A608DE1AAE852A00BCE34E /* Recipe.m */; };
 		48A608E51AAE992E00BCE34E /* RecipeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 48A608E41AAE992E00BCE34E /* RecipeCell.m */; };
 		48A608E81AAE9C2A00BCE34E /* RecipeListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 48A608E71AAE9C2A00BCE34E /* RecipeListViewController.m */; };
+		48CB555F1B24E8F4002425FD /* raw-salmon-fillets2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 48CB555E1B24E8F4002425FD /* raw-salmon-fillets2.jpg */; };
+		48CB55611B24FDF0002425FD /* worldpizza.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 48CB55601B24FDF0002425FD /* worldpizza.jpg */; };
 		48CBA2991B0EDCFF00BC31F1 /* IngredientsListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 48CBA2981B0EDCFF00BC31F1 /* IngredientsListViewController.m */; };
 		48CBA29F1B0EE10600BC31F1 /* IngredientsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 48CBA29E1B0EE10600BC31F1 /* IngredientsCell.m */; };
 		48E5E8E01B03F96100723575 /* Ingredients.m in Sources */ = {isa = PBXBuildFile; fileRef = 48E5E8DF1B03F96100723575 /* Ingredients.m */; };
@@ -84,6 +86,8 @@
 		48A608E41AAE992E00BCE34E /* RecipeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecipeCell.m; sourceTree = "<group>"; };
 		48A608E61AAE9C1E00BCE34E /* RecipeListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = RecipeListViewController.h; path = ../RecipeListViewController.h; sourceTree = "<group>"; };
 		48A608E71AAE9C2A00BCE34E /* RecipeListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RecipeListViewController.m; path = ../RecipeListViewController.m; sourceTree = "<group>"; };
+		48CB555E1B24E8F4002425FD /* raw-salmon-fillets2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "raw-salmon-fillets2.jpg"; path = "../../../Downloads/raw-salmon-fillets2.jpg"; sourceTree = "<group>"; };
+		48CB55601B24FDF0002425FD /* worldpizza.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = worldpizza.jpg; path = ../../../Downloads/worldpizza.jpg; sourceTree = "<group>"; };
 		48CBA2971B0EDCFF00BC31F1 /* IngredientsListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IngredientsListViewController.h; sourceTree = "<group>"; };
 		48CBA2981B0EDCFF00BC31F1 /* IngredientsListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IngredientsListViewController.m; sourceTree = "<group>"; };
 		48CBA29D1B0EE10600BC31F1 /* IngredientsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IngredientsCell.h; path = ../IngredientsCell.h; sourceTree = "<group>"; };
@@ -133,6 +137,7 @@
 		484EDEB01AABACA200A5B0D0 = {
 			isa = PBXGroup;
 			children = (
+				48CB555D1B24E8D7002425FD /* Resources */,
 				482D14B21AACF17600366342 /* Images */,
 				484EDEE81AABCA9100A5B0D0 /* ToDo */,
 				484EDEBB1AABACA200A5B0D0 /* WorldGrub */,
@@ -220,6 +225,15 @@
 				484EDEDA1AABACA300A5B0D0 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		48CB555D1B24E8D7002425FD /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				48CB55601B24FDF0002425FD /* worldpizza.jpg */,
+				48CB555E1B24E8F4002425FD /* raw-salmon-fillets2.jpg */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 		C4813FF5297819C29411D16F /* Frameworks */ = {
@@ -314,7 +328,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				484EDECB1AABACA300A5B0D0 /* Main.storyboard in Resources */,
+				48CB555F1B24E8F4002425FD /* raw-salmon-fillets2.jpg in Resources */,
 				484EDED01AABACA300A5B0D0 /* LaunchScreen.xib in Resources */,
+				48CB55611B24FDF0002425FD /* worldpizza.jpg in Resources */,
 				484EDEE91AABCA9100A5B0D0 /* ToDo in Resources */,
 				484EDECD1AABACA300A5B0D0 /* Images.xcassets in Resources */,
 				4848740A1ADA206A0038001D /* pasta.jpg in Resources */,

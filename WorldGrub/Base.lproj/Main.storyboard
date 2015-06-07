@@ -16,6 +16,10 @@
                         <color key="separatorColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <color key="sectionIndexColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="sectionIndexBackgroundColor" red="0.52899952210000001" green="1" blue="0.55026217629999996" alpha="1" colorSpace="calibratedRGB"/>
+                        <imageView key="tableFooterView" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="worldpizza.jpg" id="W4D-0p-ShW">
+                            <rect key="frame" x="0.0" y="129" width="600" height="472"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        </imageView>
                         <sections>
                             <tableViewSection id="y3C-xz-MiA">
                                 <cells>
@@ -24,47 +28,39 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="NwP-e9-Ifb" id="fs7-G5-rW4">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Foods of The World" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6RB-Cu-uOl">
-                                                    <rect key="frame" x="26" y="17" width="183" height="36"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="World Grub" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6RB-Cu-uOl">
+                                                    <rect key="frame" x="8" y="17" width="584" height="36"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="36" id="7LA-UG-H1I"/>
-                                                        <constraint firstAttribute="width" constant="183" id="dfA-gf-Qub"/>
+                                                        <constraint firstAttribute="width" constant="584" id="dfA-gf-Qub"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="35"/>
                                                     <nil key="highlightedColor"/>
+                                                    <variation key="default">
+                                                        <mask key="constraints">
+                                                            <exclude reference="7LA-UG-H1I"/>
+                                                        </mask>
+                                                    </variation>
                                                 </label>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="6RB-Cu-uOl" firstAttribute="top" secondItem="fs7-G5-rW4" secondAttribute="topMargin" constant="9" id="Coe-b3-SQD"/>
-                                                <constraint firstItem="6RB-Cu-uOl" firstAttribute="leading" secondItem="fs7-G5-rW4" secondAttribute="leadingMargin" constant="18" id="cMX-Rt-hBk"/>
+                                                <constraint firstAttribute="centerY" secondItem="6RB-Cu-uOl" secondAttribute="centerY" id="WG4-L6-WGe"/>
+                                                <constraint firstItem="6RB-Cu-uOl" firstAttribute="leading" secondItem="fs7-G5-rW4" secondAttribute="leadingMargin" id="cMX-Rt-hBk"/>
+                                                <constraint firstItem="6RB-Cu-uOl" firstAttribute="top" secondItem="fs7-G5-rW4" secondAttribute="topMargin" constant="9" id="e3Y-w4-yPS"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="6RB-Cu-uOl" secondAttribute="bottom" constant="3.5" id="qE8-eI-jUa"/>
+                                                <constraint firstAttribute="centerX" secondItem="6RB-Cu-uOl" secondAttribute="centerX" id="rQM-Nz-kp4"/>
                                             </constraints>
+                                            <variation key="default">
+                                                <mask key="constraints">
+                                                    <exclude reference="Coe-b3-SQD"/>
+                                                    <exclude reference="WG4-L6-WGe"/>
+                                                </mask>
+                                            </variation>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" red="0.52899952210000001" green="1" blue="0.55026217629999996" alpha="1" colorSpace="calibratedRGB"/>
                                         <connections>
                                             <segue destination="daS-q4-L89" kind="show" id="gFE-O3-Pss"/>
                                         </connections>
-                                    </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="61" id="bbk-Lh-6SC">
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="bbk-Lh-6SC" id="dGe-Vv-szd">
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Food" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HE6-RM-HVK">
-                                                    <rect key="frame" x="27" y="8" width="120" height="36"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="36" id="693-tp-DwX"/>
-                                                        <constraint firstAttribute="width" constant="120" id="R1f-0I-vRy"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="HE6-RM-HVK" firstAttribute="leading" secondItem="dGe-Vv-szd" secondAttribute="leadingMargin" constant="19" id="Gac-rD-KTC"/>
-                                                <constraint firstItem="HE6-RM-HVK" firstAttribute="top" secondItem="dGe-Vv-szd" secondAttribute="topMargin" id="Og7-cS-QmX"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
@@ -363,14 +359,12 @@
                         <subviews>
                             <pickerView contentMode="center" translatesAutoresizingMaskIntoConstraints="NO" id="wV6-W4-5QR">
                                 <rect key="frame" x="140" y="151" width="320" height="162"/>
-                                <color key="backgroundColor" red="0.39215686274509803" green="0.87450980392156863" blue="0.90588235294117647" alpha="1" colorSpace="calibratedRGB"/>
                             </pickerView>
                             <searchBar contentMode="redraw" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aYQ-zI-qrf">
                                 <rect key="frame" x="0.0" y="64" width="600" height="44"/>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
                         </subviews>
-                        <color key="backgroundColor" red="0.39215686274509803" green="0.87450980392156863" blue="0.90588235294117647" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="centerY" secondItem="wV6-W4-5QR" secondAttribute="centerY" constant="68" id="3eM-3d-bqc"/>
                             <constraint firstAttribute="centerX" secondItem="wV6-W4-5QR" secondAttribute="centerX" id="J0v-hZ-rp5"/>
@@ -405,4 +399,7 @@
             <point key="canvasLocation" x="-481" y="125"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="worldpizza.jpg" width="3000" height="1939"/>
+    </resources>
 </document>
