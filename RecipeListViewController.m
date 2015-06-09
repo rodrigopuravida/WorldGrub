@@ -46,7 +46,7 @@
                                                          forIndexPath:indexPath];
     self.recipe = self.recipeList[indexPath.row];
     
-    if (self.recipeList.count == 0) {
+    if (self.recipeList.count < 1) {
         cell.recipeTitle.text = @"No recipes found - Apologies";
     }
     else {

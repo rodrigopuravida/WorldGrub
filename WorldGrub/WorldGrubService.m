@@ -37,8 +37,8 @@
     }] asJsonAsync:^(UNIHTTPJsonResponse *response, NSError *error) {
         NSInteger code = response.code;
         //why is responseHeadhers and body not needed ????
-        //NSDictionary *responseHeaders = response.headers;
-        //UNIJsonNode *body = response.body;
+        NSDictionary *responseHeaders = response.headers;
+        UNIJsonNode *body = response.body;
         NSData *rawBody = response.rawBody;
         
         if (error) {

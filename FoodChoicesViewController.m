@@ -38,13 +38,14 @@
     // Do any additional setup after loading the view.
     
     //TODO: Set up background for image
-//    UIGraphicsBeginImageContext(self.view.frame.size);
-//    [[UIImage imageNamed:@"mexicanfood.jpg"] drawInRect:self.view.bounds];
-//    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
-//    UIGraphicsEndImageContext();
-//    
-//    self.view.backgroundColor = [UIColor colorWithPatternImage:image];
-
+    UIGraphicsBeginImageContext(self.view.frame.size);
+    [[UIImage imageNamed:@"raw-salmon-fillets2.jpg"] drawInRect:self.view.bounds];
+    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    
+    self.view.backgroundColor = [UIColor colorWithPatternImage:image];
+    
+        
     //setting up values for UIPicker
     self.countryArray = @[@"African", @"Chinese", @"Japanese", @"Korean", @"Vietnamese", @"Thai", @"Indian", @"British", @"Irish", @"French", @"Italian", @"Mexican", @"Spanish", @"Middle Eastern", @"Jewish", @"American", @"Cajun", @"Southern", @"Greek", @"German", @"Nordic", @"Eastern European", @"Caribbean", @"Latin American"];
  
