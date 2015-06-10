@@ -291,7 +291,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select Region and then enter search query below:" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L51-s4-NPo">
-                                <rect key="frame" x="21" y="82" width="563" height="21"/>
+                                <rect key="frame" x="21" y="51" width="563" height="21.5"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -301,8 +301,8 @@
                             <constraint firstAttribute="centerY" secondItem="wV6-W4-5QR" secondAttribute="centerY" constant="68" id="3eM-3d-bqc"/>
                             <constraint firstItem="L51-s4-NPo" firstAttribute="trailing" secondItem="yD0-fW-jc0" secondAttribute="trailingMargin" id="7L2-jH-bGn"/>
                             <constraint firstAttribute="centerX" secondItem="wV6-W4-5QR" secondAttribute="centerX" id="J0v-hZ-rp5"/>
-                            <constraint firstItem="L51-s4-NPo" firstAttribute="top" secondItem="h8c-Ag-Q3O" secondAttribute="bottom" constant="62" id="JIV-G4-zIl"/>
-                            <constraint firstItem="aYQ-zI-qrf" firstAttribute="top" secondItem="L51-s4-NPo" secondAttribute="bottom" constant="31" id="iLM-6X-GhQ"/>
+                            <constraint firstItem="L51-s4-NPo" firstAttribute="top" secondItem="h8c-Ag-Q3O" secondAttribute="bottom" constant="31" id="JIV-G4-zIl"/>
+                            <constraint firstItem="aYQ-zI-qrf" firstAttribute="top" secondItem="L51-s4-NPo" secondAttribute="bottom" constant="10" id="iLM-6X-GhQ"/>
                             <constraint firstItem="L51-s4-NPo" firstAttribute="leading" secondItem="yD0-fW-jc0" secondAttribute="leadingMargin" constant="5" id="sZq-tN-2cb"/>
                         </constraints>
                     </view>

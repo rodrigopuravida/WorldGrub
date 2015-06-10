@@ -111,7 +111,6 @@
     
     //self.cuisine = self.countryArray[row];
     self.cuisine = self.countryArray[row];
-
     return self.cuisine;
 }
 
@@ -120,6 +119,21 @@
     int sectionWidth = 300;
     
     return sectionWidth;
+}
+
+- (UIView *)pickerView:(UIPickerView *)pickerView viewForRow:(NSInteger)row forComponent:(NSInteger)component reusingView:(UIView *)view
+{
+    
+    UILabel *pickerViewLabel = (id)view;
+    
+    if (!pickerViewLabel) {
+        pickerViewLabel= [[UILabel alloc] initWithFrame:CGRectMake(0.0f, 0.0f, [pickerView rowSizeForComponent:component].width - 10.0f, [pickerView rowSizeForComponent:component].height)];
+    }
+    pickerViewLabel.backgroundColor = [UIColor clearColor];
+    pickerViewLabel.text = self.countryArray[row];
+    pickerViewLabel.font = [UIFont fontWithName:@"ChalkboardSE-Regular" size:30];
+    
+    return pickerViewLabel;
 }
 
 - (void)didReceiveMemoryWarning {
