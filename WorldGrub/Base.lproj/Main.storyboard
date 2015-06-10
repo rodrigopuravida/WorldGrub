@@ -328,11 +328,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="worldpizza.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="W4D-0p-ShW">
-                                <rect key="frame" x="0.0" y="64" width="600" height="472"/>
+                            <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="worldpizza.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="W4D-0p-ShW">
+                                <rect key="frame" x="24" y="112" width="543" height="424"/>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" red="0.97647064920000004" green="0.094117656349999995" blue="0.52549022440000004" alpha="1" colorSpace="deviceRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="W4D-0p-ShW" secondAttribute="trailing" constant="17" id="L8R-oM-xnB"/>
+                            <constraint firstItem="35A-tF-zYV" firstAttribute="top" secondItem="W4D-0p-ShW" secondAttribute="bottom" constant="64" id="UtU-T7-mhg"/>
+                            <constraint firstItem="W4D-0p-ShW" firstAttribute="top" secondItem="Fro-hq-3AC" secondAttribute="bottom" constant="48" id="dry-c8-NOc"/>
+                            <constraint firstItem="W4D-0p-ShW" firstAttribute="leading" secondItem="ue2-78-Esk" secondAttribute="leadingMargin" constant="8" id="q1C-8o-t7s"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="nga-CQ-F7M"/>
                     <connections>
