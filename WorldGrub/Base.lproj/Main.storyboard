@@ -324,19 +324,21 @@
                         <viewControllerLayoutGuide type="top" id="Fro-hq-3AC"/>
                         <viewControllerLayoutGuide type="bottom" id="35A-tF-zYV"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="ue2-78-Esk">
+                    <view key="view" contentMode="scaleAspectFit" id="ue2-78-Esk">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="worldpizza.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="W4D-0p-ShW">
-                                <rect key="frame" x="24" y="112" width="543" height="424"/>
+                                <rect key="frame" x="16" y="64" width="568" height="465"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </imageView>
                         </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="W4D-0p-ShW" secondAttribute="trailing" constant="17" id="L8R-oM-xnB"/>
-                            <constraint firstItem="35A-tF-zYV" firstAttribute="top" secondItem="W4D-0p-ShW" secondAttribute="bottom" constant="64" id="UtU-T7-mhg"/>
-                            <constraint firstItem="W4D-0p-ShW" firstAttribute="top" secondItem="Fro-hq-3AC" secondAttribute="bottom" constant="48" id="dry-c8-NOc"/>
-                            <constraint firstItem="W4D-0p-ShW" firstAttribute="leading" secondItem="ue2-78-Esk" secondAttribute="leadingMargin" constant="8" id="q1C-8o-t7s"/>
+                            <constraint firstItem="W4D-0p-ShW" firstAttribute="leading" secondItem="ue2-78-Esk" secondAttribute="leadingMargin" id="1D7-jf-g7O"/>
+                            <constraint firstItem="W4D-0p-ShW" firstAttribute="top" secondItem="Fro-hq-3AC" secondAttribute="bottom" id="8s8-2S-kDj"/>
+                            <constraint firstItem="W4D-0p-ShW" firstAttribute="trailing" secondItem="ue2-78-Esk" secondAttribute="trailingMargin" id="igL-qw-OWP"/>
+                            <constraint firstItem="35A-tF-zYV" firstAttribute="top" secondItem="W4D-0p-ShW" secondAttribute="bottom" constant="71" id="xdD-CC-mUC"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="nga-CQ-F7M"/>
