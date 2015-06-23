@@ -92,17 +92,17 @@
     
     self.ingredientsBtn.layer.backgroundColor = [UIColor grayColor].CGColor;
     
-    self.ingredientsBtn.layer.borderWidth = 2.0;
+    self.ingredientsBtn.layer.borderWidth = 1.0;
     
-    self.ingredientsBtn.layer.cornerRadius = 15;
+    //self.ingredientsBtn.layer.cornerRadius = 15;
     
     self.directionsBtn.layer.borderColor = [UIColor blackColor].CGColor;
     
     self.directionsBtn.layer.backgroundColor = [UIColor grayColor].CGColor;
     
-    self.directionsBtn.layer.borderWidth = 2.0;
+    self.directionsBtn.layer.borderWidth = 1.0;
     
-    self.directionsBtn.layer.cornerRadius = 15;
+    //self.directionsBtn.layer.cornerRadius = 15;
 
     
     
