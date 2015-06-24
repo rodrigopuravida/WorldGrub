@@ -151,26 +151,26 @@
                                     </mask>
                                 </variation>
                             </imageView>
-                            <button opaque="NO" contentMode="center" contentHorizontalAlignment="fill" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="srB-pN-2Ac">
-                                <rect key="frame" x="24" y="550" width="77" height="30"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <state key="normal" title="Ingredients">
-                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="displayIngredients:" destination="g91-dv-tOG" eventType="touchUpInside" id="CPB-C7-kdF"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r3G-pI-la0">
+                            <button opaque="NO" contentMode="scaleAspectFit" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="r3G-pI-la0">
                                 <rect key="frame" x="507" y="550" width="69" height="30"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <state key="normal" title="Directions">
+                                <state key="normal" title="  Directions  ">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="displayDirections:" destination="g91-dv-tOG" eventType="touchUpInside" id="jPV-Va-Mgj"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleAspectFit" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="srB-pN-2Ac">
+                                <rect key="frame" x="24" y="550" width="77" height="30"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="  Ingredients  ">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="displayIngredients:" destination="g91-dv-tOG" eventType="touchUpInside" id="CPB-C7-kdF"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -291,7 +291,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select Region and then enter search query below:" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L51-s4-NPo">
-                                <rect key="frame" x="21" y="82" width="563" height="21"/>
+                                <rect key="frame" x="21" y="51" width="563" height="22"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -301,8 +301,8 @@
                             <constraint firstAttribute="centerY" secondItem="wV6-W4-5QR" secondAttribute="centerY" constant="68" id="3eM-3d-bqc"/>
                             <constraint firstItem="L51-s4-NPo" firstAttribute="trailing" secondItem="yD0-fW-jc0" secondAttribute="trailingMargin" id="7L2-jH-bGn"/>
                             <constraint firstAttribute="centerX" secondItem="wV6-W4-5QR" secondAttribute="centerX" id="J0v-hZ-rp5"/>
-                            <constraint firstItem="L51-s4-NPo" firstAttribute="top" secondItem="h8c-Ag-Q3O" secondAttribute="bottom" constant="62" id="JIV-G4-zIl"/>
-                            <constraint firstItem="aYQ-zI-qrf" firstAttribute="top" secondItem="L51-s4-NPo" secondAttribute="bottom" constant="31" id="iLM-6X-GhQ"/>
+                            <constraint firstItem="L51-s4-NPo" firstAttribute="top" secondItem="h8c-Ag-Q3O" secondAttribute="bottom" constant="31" id="JIV-G4-zIl"/>
+                            <constraint firstItem="aYQ-zI-qrf" firstAttribute="top" secondItem="L51-s4-NPo" secondAttribute="bottom" constant="10" id="iLM-6X-GhQ"/>
                             <constraint firstItem="L51-s4-NPo" firstAttribute="leading" secondItem="yD0-fW-jc0" secondAttribute="leadingMargin" constant="5" id="sZq-tN-2cb"/>
                         </constraints>
                     </view>
@@ -324,15 +324,22 @@
                         <viewControllerLayoutGuide type="top" id="Fro-hq-3AC"/>
                         <viewControllerLayoutGuide type="bottom" id="35A-tF-zYV"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="ue2-78-Esk">
+                    <view key="view" contentMode="scaleAspectFit" id="ue2-78-Esk">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="worldpizza.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="W4D-0p-ShW">
-                                <rect key="frame" x="0.0" y="64" width="600" height="472"/>
+                            <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="worldSoup.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="W4D-0p-ShW">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" red="0.97647064920000004" green="0.094117656349999995" blue="0.52549022440000004" alpha="1" colorSpace="deviceRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="W4D-0p-ShW" firstAttribute="leading" secondItem="ue2-78-Esk" secondAttribute="leadingMargin" constant="-16" id="4or-3p-W2H"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="W4D-0p-ShW" secondAttribute="trailing" constant="-16" id="Hi4-Hk-lOw"/>
+                            <constraint firstItem="W4D-0p-ShW" firstAttribute="top" secondItem="ue2-78-Esk" secondAttribute="topMargin" id="M3J-lF-GbX"/>
+                            <constraint firstItem="35A-tF-zYV" firstAttribute="top" secondItem="W4D-0p-ShW" secondAttribute="bottom" id="azp-Fb-krI"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="nga-CQ-F7M"/>
                     <connections>
@@ -363,6 +370,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="worldpizza.jpg" width="2208" height="1242"/>
+        <image name="worldSoup.jpg" width="3000" height="3000"/>
     </resources>
 </document>

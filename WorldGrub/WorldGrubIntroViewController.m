@@ -11,6 +11,7 @@
 
 @interface WorldGrubIntroViewController ()
 @property (weak, nonatomic) IBOutlet UIImageView *worldGrubImage;
+@property (weak, nonatomic) IBOutlet UILabel *introLabel;
 
 @end
 
@@ -19,15 +20,28 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.introLabel.font = [UIFont fontWithName:@"ChalkboardSE-Regular" size:25];
+    
     UITapGestureRecognizer *singleTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapDetected)];
     singleTap.numberOfTapsRequired = 1;
     [self.worldGrubImage setUserInteractionEnabled:YES];
     [self.worldGrubImage addGestureRecognizer:singleTap];
     
+    UISwipeGestureRecognizer *singleSwipe = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(swipeDetected)];
+    [singleSwipe setDirection:(UISwipeGestureRecognizerDirectionRight | UISwipeGestureRecognizerDirectionLeft )];
+    [self.worldGrubImage addGestureRecognizer:singleSwipe];
+
     
 }
 
 -(void)tapDetected{
+    NSLog(@"single Tap on WorldGrub Image");
+    FoodChoicesViewController *foodChoices = [self.storyboard instantiateViewControllerWithIdentifier:@"FOODCHOICESVC"];
+    [self.navigationController pushViewController:foodChoices animated:YES];
+    
+}
+
+-(void)swipeDetected{
     NSLog(@"single Tap on WorldGrub Image");
     FoodChoicesViewController *foodChoices = [self.storyboard instantiateViewControllerWithIdentifier:@"FOODCHOICESVC"];
     [self.navigationController pushViewController:foodChoices animated:YES];
