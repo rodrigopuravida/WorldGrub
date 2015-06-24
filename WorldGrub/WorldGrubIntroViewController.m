@@ -27,9 +27,21 @@
     [self.worldGrubImage setUserInteractionEnabled:YES];
     [self.worldGrubImage addGestureRecognizer:singleTap];
     
+    UISwipeGestureRecognizer *singleSwipe = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(swipeDetected)];
+    [singleSwipe setDirection:(UISwipeGestureRecognizerDirectionRight | UISwipeGestureRecognizerDirectionLeft )];
+    [self.worldGrubImage addGestureRecognizer:singleSwipe];
+
+    
 }
 
 -(void)tapDetected{
+    NSLog(@"single Tap on WorldGrub Image");
+    FoodChoicesViewController *foodChoices = [self.storyboard instantiateViewControllerWithIdentifier:@"FOODCHOICESVC"];
+    [self.navigationController pushViewController:foodChoices animated:YES];
+    
+}
+
+-(void)swipeDetected{
     NSLog(@"single Tap on WorldGrub Image");
     FoodChoicesViewController *foodChoices = [self.storyboard instantiateViewControllerWithIdentifier:@"FOODCHOICESVC"];
     [self.navigationController pushViewController:foodChoices animated:YES];

@@ -33,6 +33,7 @@
 		48CB55611B24FDF0002425FD /* worldpizza.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 48CB55601B24FDF0002425FD /* worldpizza.jpg */; };
 		48CBA2991B0EDCFF00BC31F1 /* IngredientsListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 48CBA2981B0EDCFF00BC31F1 /* IngredientsListViewController.m */; };
 		48CBA29F1B0EE10600BC31F1 /* IngredientsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 48CBA29E1B0EE10600BC31F1 /* IngredientsCell.m */; };
+		48CEEBFE1B3AF3E100A1B747 /* worldSoup.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 48CEEBFD1B3AF3E100A1B747 /* worldSoup.jpg */; };
 		48E5E8E01B03F96100723575 /* Ingredients.m in Sources */ = {isa = PBXBuildFile; fileRef = 48E5E8DF1B03F96100723575 /* Ingredients.m */; };
 		CF408580CC4C8A007D5FF0CB /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 72616C04814D6DD024BEA096 /* libPods.a */; };
 /* End PBXBuildFile section */
@@ -95,6 +96,7 @@
 		48CBA2981B0EDCFF00BC31F1 /* IngredientsListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IngredientsListViewController.m; sourceTree = "<group>"; };
 		48CBA29D1B0EE10600BC31F1 /* IngredientsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IngredientsCell.h; path = ../IngredientsCell.h; sourceTree = "<group>"; };
 		48CBA29E1B0EE10600BC31F1 /* IngredientsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IngredientsCell.m; path = ../IngredientsCell.m; sourceTree = "<group>"; };
+		48CEEBFD1B3AF3E100A1B747 /* worldSoup.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = worldSoup.jpg; path = WorldGrub/worldSoup.jpg; sourceTree = "<group>"; };
 		48E5E8DE1B03F96100723575 /* Ingredients.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ingredients.h; sourceTree = "<group>"; };
 		48E5E8DF1B03F96100723575 /* Ingredients.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Ingredients.m; sourceTree = "<group>"; };
 		72616C04814D6DD024BEA096 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -236,6 +238,7 @@
 			isa = PBXGroup;
 			children = (
 				48CB55601B24FDF0002425FD /* worldpizza.jpg */,
+				48CEEBFD1B3AF3E100A1B747 /* worldSoup.jpg */,
 				48CB555E1B24E8F4002425FD /* raw-salmon-fillets2.jpg */,
 			);
 			name = Resources;
@@ -332,6 +335,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				48CEEBFE1B3AF3E100A1B747 /* worldSoup.jpg in Resources */,
 				484EDECB1AABACA300A5B0D0 /* Main.storyboard in Resources */,
 				48CB555F1B24E8F4002425FD /* raw-salmon-fillets2.jpg in Resources */,
 				484EDED01AABACA300A5B0D0 /* LaunchScreen.xib in Resources */,

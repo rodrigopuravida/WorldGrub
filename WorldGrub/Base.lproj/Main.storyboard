@@ -328,33 +328,21 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Click the World Grub Below" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eyF-EW-DnK">
-                                <rect key="frame" x="194" y="64" width="212" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="worldpizza.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="W4D-0p-ShW">
-                                <rect key="frame" x="16" y="93" width="568" height="436"/>
+                            <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="worldSoup.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="W4D-0p-ShW">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="436" id="SZj-Om-rI9"/>
-                                </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="W4D-0p-ShW" firstAttribute="leading" secondItem="ue2-78-Esk" secondAttribute="leadingMargin" id="BGL-Sh-7uf"/>
-                            <constraint firstItem="eyF-EW-DnK" firstAttribute="top" secondItem="Fro-hq-3AC" secondAttribute="bottom" id="Iv4-Ro-C45"/>
-                            <constraint firstItem="W4D-0p-ShW" firstAttribute="top" secondItem="eyF-EW-DnK" secondAttribute="bottom" constant="8" id="f1U-J5-Kbw"/>
-                            <constraint firstItem="35A-tF-zYV" firstAttribute="top" secondItem="W4D-0p-ShW" secondAttribute="bottom" constant="71" id="llB-fT-c63"/>
-                            <constraint firstItem="W4D-0p-ShW" firstAttribute="trailing" secondItem="ue2-78-Esk" secondAttribute="trailingMargin" id="o4H-WN-7EU"/>
-                            <constraint firstAttribute="centerX" secondItem="eyF-EW-DnK" secondAttribute="centerX" id="ove-Ta-p4d"/>
+                            <constraint firstItem="W4D-0p-ShW" firstAttribute="leading" secondItem="ue2-78-Esk" secondAttribute="leadingMargin" constant="-16" id="4or-3p-W2H"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="W4D-0p-ShW" secondAttribute="trailing" constant="-16" id="Hi4-Hk-lOw"/>
+                            <constraint firstItem="W4D-0p-ShW" firstAttribute="top" secondItem="ue2-78-Esk" secondAttribute="topMargin" id="M3J-lF-GbX"/>
+                            <constraint firstItem="35A-tF-zYV" firstAttribute="top" secondItem="W4D-0p-ShW" secondAttribute="bottom" id="azp-Fb-krI"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="nga-CQ-F7M"/>
                     <connections>
-                        <outlet property="introLabel" destination="eyF-EW-DnK" id="OmF-0o-Rc2"/>
                         <outlet property="worldGrubImage" destination="W4D-0p-ShW" id="3F0-nC-DL1"/>
                     </connections>
                 </viewController>
@@ -382,6 +370,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="worldpizza.jpg" width="2208" height="1242"/>
+        <image name="worldSoup.jpg" width="3000" height="3000"/>
     </resources>
 </document>
