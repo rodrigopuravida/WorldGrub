@@ -17,6 +17,7 @@
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (weak, nonatomic) NSString *recipeId;
 @property (weak, nonatomic) Recipe *recipe;
+@property (weak, nonatomic) IBOutlet UILabel *noResultsLabel;
 
 @end
 
@@ -37,6 +38,9 @@
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     NSLog(@"%lu", (unsigned long)self.recipeList.count);
+    if (self.recipeList.count < 1) {
+        self.noResultsLabel.text = @"No Results Found - Apologies";
+    }
     return self.recipeList.count;
     
 }
@@ -46,12 +50,7 @@
                                                          forIndexPath:indexPath];
     self.recipe = self.recipeList[indexPath.row];
     
-    if (self.recipeList.count < 1) {
-        cell.recipeTitle.text = @"No recipes found - Apologies";
-    }
-    else {
-        cell.recipeTitle.text = self.recipe.title;
-    }
+    cell.recipeTitle.text = self.recipe.title;
     
 //    self.recipeId = self.recipe.recipeId;
 //    NSLog(@"RecipeId");
