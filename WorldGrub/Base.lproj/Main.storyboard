@@ -343,7 +343,7 @@
                                     <constraint firstAttribute="height" constant="464" id="Snm-Yn-DzZ"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="agQ-g8-gNu">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="agQ-g8-gNu" userLabel="“If more of us valued food and cheer and song above hoarded gold, it would be a merrier world.” – J.R.R. Tolkien">
                                 <rect key="frame" x="16" y="64" width="568" height="29"/>
                                 <string key="text">“If more of us valued food and cheer and song above hoarded gold, it would be a merrier world.”
 – J.R.R. Tolkien</string>
@@ -365,6 +365,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="nga-CQ-F7M"/>
                     <connections>
+                        <outlet property="foodQuoteLabel" destination="agQ-g8-gNu" id="oRl-r0-lv6"/>
                         <outlet property="worldGrubImage" destination="W4D-0p-ShW" id="3F0-nC-DL1"/>
                     </connections>
                 </viewController>

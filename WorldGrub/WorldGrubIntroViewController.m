@@ -11,7 +11,7 @@
 
 @interface WorldGrubIntroViewController ()
 @property (weak, nonatomic) IBOutlet UIImageView *worldGrubImage;
-@property (weak, nonatomic) IBOutlet UILabel *introLabel;
+@property (weak, nonatomic) IBOutlet UILabel *foodQuoteLabel;
 
 @end
 
@@ -20,7 +20,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.introLabel.font = [UIFont fontWithName:@"ChalkboardSE-Regular" size:25];
+    self.foodQuoteLabel.font = [UIFont fontWithName:@"ChalkboardSE-Regular" size:20];
     
     UITapGestureRecognizer *singleTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapDetected)];
     singleTap.numberOfTapsRequired = 1;
