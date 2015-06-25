@@ -299,7 +299,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select Region and then enter search query below:" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L51-s4-NPo">
-                                <rect key="frame" x="21" y="51" width="563" height="21.5"/>
+                                <rect key="frame" x="21" y="51" width="563" height="22"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -337,16 +337,30 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="worldSoup.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="W4D-0p-ShW">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <rect key="frame" x="8" y="116" width="584" height="464"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="464" id="Snm-Yn-DzZ"/>
+                                </constraints>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="agQ-g8-gNu">
+                                <rect key="frame" x="16" y="64" width="568" height="29"/>
+                                <string key="text">“If more of us valued food and cheer and song above hoarded gold, it would be a merrier world.”
+– J.R.R. Tolkien</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="W4D-0p-ShW" firstAttribute="leading" secondItem="ue2-78-Esk" secondAttribute="leadingMargin" constant="-16" id="4or-3p-W2H"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="W4D-0p-ShW" secondAttribute="trailing" constant="-16" id="Hi4-Hk-lOw"/>
-                            <constraint firstItem="W4D-0p-ShW" firstAttribute="top" secondItem="ue2-78-Esk" secondAttribute="topMargin" id="M3J-lF-GbX"/>
-                            <constraint firstItem="35A-tF-zYV" firstAttribute="top" secondItem="W4D-0p-ShW" secondAttribute="bottom" id="azp-Fb-krI"/>
+                            <constraint firstAttribute="bottom" secondItem="W4D-0p-ShW" secondAttribute="bottom" constant="20" symbolic="YES" id="AuZ-aR-G0W"/>
+                            <constraint firstItem="agQ-g8-gNu" firstAttribute="leading" secondItem="ue2-78-Esk" secondAttribute="leadingMargin" id="CDy-JT-8vc"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="W4D-0p-ShW" secondAttribute="trailing" constant="-8" id="Gai-34-mfp"/>
+                            <constraint firstItem="W4D-0p-ShW" firstAttribute="leading" secondItem="ue2-78-Esk" secondAttribute="leadingMargin" constant="-8" id="JE9-wT-fOR"/>
+                            <constraint firstItem="W4D-0p-ShW" firstAttribute="top" secondItem="agQ-g8-gNu" secondAttribute="bottom" id="LFF-qh-Psl"/>
+                            <constraint firstItem="agQ-g8-gNu" firstAttribute="top" secondItem="Fro-hq-3AC" secondAttribute="bottom" id="bU4-W2-xyH"/>
+                            <constraint firstItem="agQ-g8-gNu" firstAttribute="trailing" secondItem="ue2-78-Esk" secondAttribute="trailingMargin" id="wVg-nf-X2b"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="nga-CQ-F7M"/>
