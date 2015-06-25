@@ -57,6 +57,10 @@
 -(void)searchBarSearchButtonClicked:(UISearchBar *)searchBar {
     
     //NSLog(self.cuisine);
+    //If user does not select a country then default is Africa since is first one to show
+    if (self.cuisine == nil) {
+        self.cuisine = @"african";
+    }
     
     self.queryPart1 = @"https://webknox-recipes.p.mashape.com/recipes/search?cuisine=";
     NSString *queryInConstruction1 = [self.queryPart1 stringByAppendingString:self.cuisine];
