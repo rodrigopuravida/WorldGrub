@@ -26,13 +26,25 @@
         Recipe *recipe = [[Recipe alloc] init];
         recipe.title = item[@"title"];
         recipe.recipeId = item[@"id"];
-        recipe.recipeListImage = item[@"image"];
+        NSLog(@"%@", recipe.recipeId);
+        
+        
+        //recipe.recipeListImage = item[@"image"];
         recipe.sourceUrl = item[@"sourceUrl"];
         recipe.baseUri = [jsonDictionary objectForKey:@"baseUri"];
-        NSArray *recipeUrls = item[@"imageUrls"];
-        //recipe.recipeURL = recipeUrls[0];
+        //NSArray *recipeUrls = item[@"imageUrls"];
+        
+        //There are cases where the image is null so need to add an empty value to string
+        if (item[@"image"] == nil) {
+            recipe.recipeURL = @"";
+        }
+        else {
+            recipe.recipeURL = item[@"image"];   
+        }
+        
         //concatenating both strings
-        recipe.recipeURL = [recipe.baseUri stringByAppendingString:recipeUrls[0]];
+        //recipe.recipeURL = [recipe.baseUri stringByAppendingString:recipeUrls[0]];
+        recipe.recipeURL = [recipe.baseUri stringByAppendingString:recipe.recipeURL];
 
         [temp addObject:recipe];
     }
